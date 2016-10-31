@@ -59,14 +59,16 @@ final TextStyle itemAmountStyle = new TextStyle(
     fontSize: 15.0, color: _kTheme.primaryColor, height: 24.0 / 15.0);
 
 class MyApp extends StatelessWidget {
+  final String appTitle = 'Catalogue de mouches';
+
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Flutter Demo',
+      title: appTitle,
       theme: new ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: new MyHomePage(title: 'Catalogue de mouches'),
+      home: new MyHomePage(title: appTitle),
     );
   }
 }
