@@ -1,0 +1,4 @@
+name: flutter_sample
+uses-material-design: true
+assets:
+  - lib/wooly.png
