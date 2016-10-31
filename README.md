@@ -1,8 +1,3 @@
-# flutter_sample
+# Catalogue de mouches
 
-A new flutter project.
-
-## Getting Started
-
-For help getting started with Flutter, view our online
-[documentation](http://flutter.io/).
+Application Flutter qui a pour but de cataloguer des mouches pour le montage de mouches pour la pêche.
