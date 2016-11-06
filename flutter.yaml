@@ -2,3 +2,4 @@ name: flutter_sample
 uses-material-design: true
 assets:
   - lib/wooly.png
+  - lib/black_woolly_bugger.jpg
