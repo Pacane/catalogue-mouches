@@ -1,116 +1,59 @@
 import 'package:flutter/material.dart';
+import 'navigation.dart';
+import 'package:event_bus/event_bus.dart';
 
 void main() {
-  runApp(new MyApp());
+  runApp(new App());
 }
 
-TableRow _buildItemRow(String left, String right) {
-  return new TableRow(children: <Widget>[
-    new Padding(
-        padding: const EdgeInsets.symmetric(vertical: 4.0),
-        child: new Text(left, style: itemAmountStyle)),
-    new Padding(
-        padding: const EdgeInsets.symmetric(vertical: 4.0),
-        child: new Text(right, style: itemStyle))
-  ]);
-}
+EventBus eventBus = new EventBus();
 
-TableRow _buildItemRowWithRightWidget(String left, Widget right) {
-  return new TableRow(children: <Widget>[
-    new Padding(
-        padding: const EdgeInsets.symmetric(vertical: 4.0),
-        child: new Text(left, style: itemAmountStyle)),
-    new Padding(
-        padding: const EdgeInsets.symmetric(vertical: 4.0), child: right)
-  ]);
-}
+class ChangeTitleEvent {}
 
-class TitleStyle extends TextStyle {
-  const TitleStyle({
-    double fontSize: 16.0,
-    FontWeight fontWeight,
-    Color color: Colors.black87,
-    double letterSpacing,
-    double height,
-  })
-      : super(
-          inherit: false,
-          color: color,
-          fontFamily: 'Raleway',
-          fontSize: fontSize,
-          fontWeight: fontWeight,
-          textBaseline: TextBaseline.alphabetic,
-          letterSpacing: letterSpacing,
-          height: height,
-        );
-}
-
-final TextStyle headingStyle = const TitleStyle(
-    fontSize: 16.0, fontWeight: FontWeight.bold, height: 24.0 / 15.0);
-
-final TextStyle itemStyle =
-    const TextStyle(fontSize: 15.0, height: 24.0 / 15.0);
-final ThemeData _kTheme = new ThemeData(
-    brightness: Brightness.light,
-    primarySwatch: Colors.green,
-    accentColor: Colors.redAccent[200]);
-
-final TextStyle itemAmountStyle = new TextStyle(
-    fontSize: 15.0, color: _kTheme.primaryColor, height: 24.0 / 15.0);
-
-class MyApp extends StatelessWidget {
-  final String appTitle = 'Catalogue de mouches';
+class App extends StatefulWidget {
+  App({Key key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: appTitle,
-      theme: new ThemeData(
-        primarySwatch: Colors.green,
-      ),
-      home: new MyHomePage(title: appTitle),
-    );
+  State createState() {
+    return new AppState();
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
+class ChangeTitleButton extends StatelessWidget {
   @override
-  _MyHomePageState createState() => new _MyHomePageState();
+  Widget build(BuildContext context) {
+    return new RaisedButton(
+        child: new Text('Change title!'),
+        onPressed: () => eventBus.fire(new ChangeTitleEvent()));
+  }
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class AppState extends State<App> {
+  int timesButtonClicked = 0;
+  String title = '';
+
+  List<String> nextTitres = ['Titre 0', 'Titre 1', 'Titre 2'];
+
+  AppState() {
+    title = nextTitres[0];
+
+    eventBus.on(ChangeTitleEvent).listen((e) {
+      timesButtonClicked++;
+
+      if (timesButtonClicked <= 2) {
+        setState(() {
+          title = nextTitres[timesButtonClicked];
+        });
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: new AppBar(
-        title: new Text(config.title),
-      ),
-      body: new Column(children: <Widget>[
-        new ClipRect(
-            child: new Image.asset('lib/wooly.png', fit: ImageFit.fill)),
-        new Material(
-            child: new Padding(
-                padding: const EdgeInsets.all(32.0),
-                child: new Table(children: [
-                  _buildItemRow('Nom', 'Wooly bugger'),
-                  _buildItemRow('Insecte imité', 'Sangsue'),
-                  _buildItemRowWithRightWidget(
-                      'Matériel',
-                      new Table(children: [
-                        new TableRow(
-                            children: [new Text('Wooly bugger marabou')]),
-                        new TableRow(children: [new Text('Chenille')]),
-                        new TableRow(
-                            children: [new Text('Wooly bugger hackle')]),
-                        new TableRow(
-                            children: [new Text('(Optionel) Tincelle')]),
-                      ]))
-                ]))),
-      ]),
-    );
+        appBar: new AppBar(title: new Text(title)),
+        body: new Padding(
+            padding: ,
+            child: new ChangeTitleButton()));
   }
 }
