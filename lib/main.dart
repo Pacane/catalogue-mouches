@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'fly_selector.dart';
 import 'package:event_bus/event_bus.dart';
+import 'package:mouches/fly.dart';
+import 'package:mouches/fly_grid_photo.dart';
+import 'fly_selector.dart';
 
 void main() {
   runApp(new App());
@@ -27,10 +29,9 @@ class AppState extends State<App> {
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: new AppBar(
-            title: new Text(title),
-            leading: new Icon(Icons.android)),
+            title: new Text(title), leading: new Icon(Icons.android)),
         body: new Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: new FlySelector()));
+            padding: const EdgeInsets.all(16.0), child: new FlySelector()));
   }
 }
+

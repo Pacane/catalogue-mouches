@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
-
-class Photo {
-  final String resourceUri;
-  final String title;
-
-  Photo(this.resourceUri, this.title);
-}
+import 'package:mouches/fly.dart';
 
 class FlyGridPhoto extends StatelessWidget {
   final Photo photo;

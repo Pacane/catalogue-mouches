@@ -1,5 +1,5 @@
-name: flutter_sample
-description: A new flutter project.
+name: mouches
+description: Browser de mouches à pêche.
 dependencies:
   flutter:
     sdk: flutter
