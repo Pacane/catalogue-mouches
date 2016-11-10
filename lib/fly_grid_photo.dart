@@ -13,7 +13,7 @@ class FlyGridPhoto extends StatelessWidget {
   String get flySlug => _slugifier.slugify(fly.name);
 
   Future<Null> _onTap(BuildContext context, Key key) async {
-    await Navigator.pushNamed(context, '/fly');
+    await Navigator.pushNamed(context, '/fly/$flySlug');
   }
 
   @override
