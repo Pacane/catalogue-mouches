@@ -18,9 +18,6 @@ class App extends StatefulWidget {
 }
 
 class AppState extends State<App> {
-  int timesButtonClicked = 0;
-  String route = '/';
-
   AppState();
 
   @override
