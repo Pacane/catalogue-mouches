@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:mouches/fly.dart';
+import 'package:mouches/src/domain/fly.dart';
 import 'package:slugify/slugify.dart';
 import 'dart:async';
 
 class FlyGridPhoto extends StatelessWidget {
   final Fly fly;
+  // TODO: Use DI
   final Slugify _slugifier = new Slugify();
 
   FlyGridPhoto(this.fly);
@@ -23,7 +24,7 @@ class FlyGridPhoto extends StatelessWidget {
         title: new Hero(
             tag: photoUri,
             child: new Padding(
-                padding: const EdgeInsets.symmetric(vertical: 5.0),
+                padding: const EdgeInsets.symmetric(vertical: 2.0),
                 child: new ClipRect(
                     child: new Image.asset(photoUri, fit: ImageFit.fill)))));
   }

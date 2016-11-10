@@ -1,11 +1,11 @@
-import 'package:mouches/fly.dart';
+import 'package:mouches/src/domain/fly.dart';
 
 class FlyService {
   static List<Fly> getFlies() {
     return [
       new Fly(
           'Woolly Bugger',
-          new Photo('lib/black_woolly_bugger.jpg', 'Woolly bugger noir'),
+          new Photo('lib/assets/black_woolly_bugger.jpg', 'Woolly bugger noir'),
           <InstallStep>[
             new InstallStep(
               'Installer fil de montage',
@@ -13,13 +13,14 @@ class FlyService {
           ]),
       new Fly(
           'Streamer',
-          new Photo('lib/streamer.jpg', 'Streamer noir et jaune'),
+          new Photo('lib/assets/streamer.jpg', 'Streamer noir et jaune'),
           <InstallStep>[
             new InstallStep(
               'Installer fil de montage',
             )
           ]),
-      new Fly('Caddis', new Photo('lib/caddis.jpg', 'Caddis'), <InstallStep>[
+      new Fly('Caddis',
+          new Photo('lib/assets/caddis.jpg', 'Caddis fly'), <InstallStep>[
         new InstallStep(
           'Installer fil de montage',
         )
