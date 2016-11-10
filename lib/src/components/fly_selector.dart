@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mouches/src/domain/fly.dart';
-import 'package:mouches/src/components/fly_grid_photo.dart';
-import 'package:mouches/src/services/fly_service.dart';
+import 'package:mouches/components.dart';
+import 'package:mouches/services.dart';
 
 class FlySelector extends StatelessWidget {
   final GlobalKey<ScrollableState> _scrollableKey =
@@ -13,8 +13,8 @@ class FlySelector extends StatelessWidget {
           child: new ScrollableList(
               scrollableKey: _scrollableKey,
               itemExtent: 250.0,
-              children: FlyService.getFlies().map((Fly f) =>
-                  new FlyGridPhoto(f))))
+              children:
+                  FlyService.getFlies().map((Fly f) => new FlyGridPhoto(f))))
     ]);
   }
 }

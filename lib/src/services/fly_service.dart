@@ -1,4 +1,4 @@
-import 'package:mouches/src/domain/fly.dart';
+import 'package:mouches/domain.dart';
 
 class FlyService {
   static List<Fly> getFlies() {
