@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:event_bus/event_bus.dart';
 import 'fly_selector.dart';
 import 'package:mouches/fly.dart';
+import 'package:mouches/fly_page.dart';
 import 'package:mouches/fly_service.dart';
 import 'package:slugify/slugify.dart';
 
@@ -39,13 +40,12 @@ Map<String, WidgetBuilder> _kRoutes() {
 
   var routes = <String, WidgetBuilder>{
     '/': (BuildContext c) => wrapInScaffold(new FlySelector(), 'Mouches'),
-    '/fly': (BuildContext c) => wrapInScaffold(new Text('In Fly!'), 'Mouche')
   };
 
   flies.forEach((Fly f) {
     var flySlug = sluggifier.slugify(f.name);
     routes.putIfAbsent('/fly/$flySlug',
-        () => (BuildContext c) => wrapInScaffold(new Text(f.name), f.name));
+        () => (BuildContext c) => wrapInScaffold(new FlyPage(f), f.name));
   });
 
   return routes;
