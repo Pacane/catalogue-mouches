@@ -32,5 +32,6 @@ wrapInScaffold(Widget w, String title) => new Scaffold(
     body: new Padding(padding: const EdgeInsets.all(16.0), child: w));
 
 final Map<String, WidgetBuilder> _kRoutes = <String, WidgetBuilder>{
-  '/': (BuildContext c) => wrapInScaffold(new FlySelector(), 'Mouches')
+  '/': (BuildContext c) => wrapInScaffold(new FlySelector(), 'Mouches'),
+  '/fly': (BuildContext c) => wrapInScaffold(new Text('In Fly!'), 'Mouche')
 };

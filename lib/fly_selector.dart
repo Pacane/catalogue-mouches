@@ -14,7 +14,7 @@ class FlySelector extends StatelessWidget {
               scrollableKey: _scrollableKey,
               itemExtent: 200.0,
               children: FlyService.getFlies().map((Fly f) =>
-                  new FlyGridPhoto(new Photo(f.photo.resourceUri, f.name)))))
+                  new FlyGridPhoto(f))))
     ]);
   }
 }
