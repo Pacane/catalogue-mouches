@@ -1,6 +1,7 @@
 import 'package:mouches/domain.dart';
 
 class FlyService {
+  // TODO: Remove static with DI
   static List<Fly> getFlies() {
     return [
       new Fly(

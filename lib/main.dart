@@ -36,6 +36,7 @@ Widget wrapInScaffold(Widget w, String title) => new Scaffold(
 
 Map<String, WidgetBuilder> _kRoutes() {
   var flies = FlyService.getFlies();
+  // TODO: Use DI
   var sluggifier = new Slugify();
 
   var routes = <String, WidgetBuilder>{
