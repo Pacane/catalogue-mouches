@@ -19,7 +19,6 @@ class App extends StatefulWidget {
 
 class AppState extends State<App> {
   int timesButtonClicked = 0;
-  String title = 'Mouches';
   String route = '/';
 
   AppState();
@@ -30,11 +29,11 @@ class AppState extends State<App> {
   }
 }
 
-wrapInScaffold(Widget w) => new Scaffold(
-    appBar: new AppBar(
-        title: new Text('Mouches'), leading: new Icon(Icons.android)),
+wrapInScaffold(Widget w, String title) => new Scaffold(
+    appBar:
+        new AppBar(title: new Text(title), leading: new Icon(Icons.android)),
     body: new Padding(padding: const EdgeInsets.all(16.0), child: w));
 
 final Map<String, WidgetBuilder> _kRoutes = <String, WidgetBuilder>{
-  '/': (BuildContext c) => wrapInScaffold(new FlySelector())
+  '/': (BuildContext c) => wrapInScaffold(new FlySelector(), 'Mouches')
 };
