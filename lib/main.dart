@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:event_bus/event_bus.dart';
-import 'fly_selector.dart';
-import 'package:mouches/fly.dart';
-import 'package:mouches/fly_page.dart';
-import 'package:mouches/fly_service.dart';
+import 'package:mouches/src/components/fly_selector.dart';
+import 'package:mouches/src/domain/fly.dart';
+import 'package:mouches/src/components/fly_page.dart';
+import 'package:mouches/src/services/fly_service.dart';
 import 'package:slugify/slugify.dart';
 
 void main() {

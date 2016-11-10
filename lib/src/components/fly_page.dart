@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mouches/fly.dart';
-import 'package:slugify/slugify.dart';
-import 'dart:async';
+import 'package:mouches/src/domain/fly.dart';
 
 class FlyPage extends StatelessWidget {
   final Fly fly;
