@@ -1,4 +1,7 @@
-name: flutter_sample
+name: mouches
 uses-material-design: true
 assets:
   - lib/wooly.png
+  - lib/black_woolly_bugger.jpg
+  - lib/streamer.jpg
+  - lib/caddis.jpg

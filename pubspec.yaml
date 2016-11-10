@@ -1,7 +1,9 @@
-name: flutter_sample
-description: A new flutter project.
+name: mouches
+description: Browser de mouches à pêche.
 dependencies:
   flutter:
     sdk: flutter
+  event_bus: '>=0.4.1 <0.5.0'
+  slugify: '>=0.1.1 <0.2.0'
 dev_dependencies:
   test: any
