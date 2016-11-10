@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:event_bus/event_bus.dart';
-import 'package:mouches/fly.dart';
-import 'package:mouches/fly_grid_photo.dart';
 import 'fly_selector.dart';
 
 void main() {
@@ -22,16 +20,21 @@ class App extends StatefulWidget {
 class AppState extends State<App> {
   int timesButtonClicked = 0;
   String title = 'Mouches';
+  String route = '/';
 
   AppState();
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-        appBar: new AppBar(
-            title: new Text(title), leading: new Icon(Icons.android)),
-        body: new Padding(
-            padding: const EdgeInsets.all(16.0), child: new FlySelector()));
+    return new MaterialApp(routes: _kRoutes);
   }
 }
 
+wrapInScaffold(Widget w) => new Scaffold(
+    appBar: new AppBar(
+        title: new Text('Mouches'), leading: new Icon(Icons.android)),
+    body: new Padding(padding: const EdgeInsets.all(16.0), child: w));
+
+final Map<String, WidgetBuilder> _kRoutes = <String, WidgetBuilder>{
+  '/': (BuildContext c) => wrapInScaffold(new FlySelector())
+};
