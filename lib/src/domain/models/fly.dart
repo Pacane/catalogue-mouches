@@ -1,5 +1,5 @@
-import 'photo.dart';
-import 'install_step.dart';
+import 'package:mouches/src/domain/models/photo.dart';
+import 'package:mouches/src/domain/models/install_step.dart';
 
 class Fly {
   final Photo photo;

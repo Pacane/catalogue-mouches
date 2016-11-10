@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mouches/src/domain/fly.dart';
+import 'package:mouches/src/domain/models/fly.dart';
 import 'package:slugify/slugify.dart';
 import 'dart:async';
 
