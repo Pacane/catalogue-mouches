@@ -3,31 +3,6 @@ import 'package:mouches/fly.dart';
 import 'package:slugify/slugify.dart';
 import 'dart:async';
 
-const Duration kHeroTransitionDuration = const Duration(milliseconds: 600);
-
-class HeroTransitionRoute extends MaterialPageRoute<Null> {
-  HeroTransitionRoute(
-      {WidgetBuilder builder, RouteSettings settings: const RouteSettings()})
-      : super(builder: builder, settings: settings);
-
-  // Cause the hero image to animate in under the toolbar
-  @override
-  void insertHeroOverlayEntry(
-      OverlayEntry entry, Object tag, OverlayState state) {
-    state.insert(entry, above: overlayEntries.first);
-  }
-
-  @override
-  Duration get transitionDuration => kHeroTransitionDuration;
-
-  // Don't shift the page up as we transition to it
-  @override
-  Widget buildTransitions(BuildContext context, Animation<double> animation,
-      Animation<double> forwardAnimation, Widget child) {
-    return new FadeTransition(opacity: animation, child: child);
-  }
-}
-
 class FlyGridPhoto extends StatelessWidget {
   final Fly fly;
   final Slugify _slugifier = new Slugify();
