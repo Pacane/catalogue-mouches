@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:mouches/domain.dart';
 import 'fly_list_item.dart';
 
-
 class FlySelector extends StatelessWidget {
   final GlobalKey<ScrollableState> _scrollableKey =
       new GlobalKey<ScrollableState>();
