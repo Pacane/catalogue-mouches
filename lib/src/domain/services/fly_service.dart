@@ -36,7 +36,7 @@ class FlyService {
             new Part('Hameçon Streamer', ['R73-9671', '2XH-3XL', 'Size 4']),
           ],
           FlyType.streamer,
-          simulates: new FlySimulation('Sangsue',
+          simulates: new FlySimulation('Menés',
               new Photo('lib/assets/minnows.jpg', "Menés dans l'eau"))),
       new Fly(
           'Caddis',

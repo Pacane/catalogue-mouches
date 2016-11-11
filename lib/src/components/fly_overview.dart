@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:mouches/domain.dart';
 import 'image_dialog.dart';
@@ -10,6 +11,10 @@ class FlyOverview extends StatelessWidget {
   ListItem _buildSimpleOverviewRow(String title, String subtitle) =>
       new ListItem(title: new Text(title), subtitle: new Text(subtitle));
 
+  Future<dynamic> _showSimulationImageDialog(BuildContext c) => showDialog(
+      context: c,
+      child: new ImageDialog(resourceUri: fly.simulates.photo.resourceUri));
+
   List<ListItem> _buildItemsToDisplay(BuildContext c) {
     final itemsToDisplay = <ListItem>[];
 
@@ -17,12 +22,12 @@ class FlyOverview extends StatelessWidget {
     itemsToDisplay.add(_buildSimpleOverviewRow('Type', fly.type.typeAsString));
     if (fly.simulates != null) {
       itemsToDisplay.add(new ListItem(
+          trailing: new IconButton(
+              icon: new Icon(Icons.photo),
+              onPressed: () => _showSimulationImageDialog(c)),
           title: new Text('Imite'),
           subtitle: new Text(fly.simulates.name),
-          onTap: () => showDialog(
-              context: c,
-              child: new ImageDialog(
-                  resourceUri: fly.simulates.photo.resourceUri))));
+          onTap: () => _showSimulationImageDialog(c)));
     }
 
     return itemsToDisplay;
