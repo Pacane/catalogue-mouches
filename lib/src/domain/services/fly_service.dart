@@ -19,7 +19,8 @@ class FlyService {
             new Part('Hameçon Streamer', ['R73-9671', '2XH-3XL', 'Size 4']),
           ],
           FlyType.streamer,
-          simulates: 'Sangsue'),
+          simulates: new FlySimulation('Sangsue',
+              new Photo('lib/assets/sangsue_eau.jpg', "Sangsue dans l'eau"))),
       new Fly(
           'Streamer',
           new Photo('lib/assets/streamer.jpg', 'Streamer noir et jaune'),
@@ -35,7 +36,8 @@ class FlyService {
             new Part('Hameçon Streamer', ['R73-9671', '2XH-3XL', 'Size 4']),
           ],
           FlyType.streamer,
-          simulates: 'Mené'),
+          simulates: new FlySimulation('Sangsue',
+              new Photo('lib/assets/minnows.jpg', "Menés dans l'eau"))),
       new Fly(
           'Caddis',
           new Photo('lib/assets/caddis.jpg', 'Caddis fly'),
@@ -51,7 +53,8 @@ class FlyService {
             new Part('Hameçon Streamer', ['R73-9671', '2XH-3XL', 'Size 4']),
           ],
           FlyType.dry,
-          simulates: 'Tricoptera (Caddis)'),
+          simulates: new FlySimulation('Tricoptera (Caddis)',
+              new Photo('lib/assets/caddis_real.jpg', 'Caddis fly'))),
     ];
   }
 }

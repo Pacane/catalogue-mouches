@@ -2,9 +2,10 @@ import 'photo.dart';
 import 'install_step.dart';
 import 'part.dart';
 import 'fly_type.dart';
+import 'fly_simulation.dart';
 
 class Fly {
-  final String simulates;
+  final FlySimulation simulates;
   final FlyType type;
   final Photo photo;
   final String name;

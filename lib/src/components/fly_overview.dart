@@ -1,21 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:mouches/domain.dart';
+import 'image_dialog.dart';
 
 class FlyOverview extends StatelessWidget {
   final Fly fly;
 
   FlyOverview(this.fly);
 
-  ListItem _buildOverviewRow(String title, String subtitle) =>
+  ListItem _buildSimpleOverviewRow(String title, String subtitle) =>
       new ListItem(title: new Text(title), subtitle: new Text(subtitle));
 
-  List<ListItem> _buildItemsToDisplay() {
+  List<ListItem> _buildItemsToDisplay(BuildContext c) {
     final itemsToDisplay = <ListItem>[];
 
-    itemsToDisplay.add(_buildOverviewRow('Nom', fly.name));
-    itemsToDisplay.add(_buildOverviewRow('Type', fly.type.typeAsString));
+    itemsToDisplay.add(_buildSimpleOverviewRow('Nom', fly.name));
+    itemsToDisplay.add(_buildSimpleOverviewRow('Type', fly.type.typeAsString));
     if (fly.simulates != null) {
-      itemsToDisplay.add(_buildOverviewRow('Imite', fly.simulates));
+      itemsToDisplay.add(new ListItem(
+          title: new Text('Imite'),
+          subtitle: new Text(fly.simulates.name),
+          onTap: () => showDialog(
+              context: c,
+              child: new ImageDialog(
+                  resourceUri: fly.simulates.photo.resourceUri))));
     }
 
     return itemsToDisplay;
@@ -25,6 +32,6 @@ class FlyOverview extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialList(
         children: ListItem.divideItems(
-            context: context, items: _buildItemsToDisplay()));
+            context: context, items: _buildItemsToDisplay(context)));
   }
 }
