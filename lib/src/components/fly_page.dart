@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mouches/domain.dart';
+import 'fly_overview.dart';
+import 'parts_list.dart';
 
 class FlyPage extends StatelessWidget {
   final Fly fly;
@@ -37,28 +39,11 @@ class FlyPage extends StatelessWidget {
               new Container(
                   key: new ObjectKey(Icons.info),
                   padding: const EdgeInsets.all(12.0),
-                  child: new MaterialList(
-                      children: ListItem
-                          .divideItems(context: context, items: <Widget>[
-                    new ListItem(
-                        title: new Text('Nom'), subtitle: new Text(fly.name)),
-                    new ListItem(
-                        title: new Text('Type'),
-                        subtitle: new Text(fly.type.typeAsString)),
-                  ]))),
+                  child: new FlyOverview(fly)),
               new Container(
                   key: new ObjectKey(Icons.shopping_cart),
                   padding: const EdgeInsets.all(12.0),
-                  child: new MaterialList(
-                      children: ListItem.divideItems(
-                          context: context,
-                          items: fly.parts.map((Part part) {
-                            return new ListItem(
-                                title: new Text(part.name),
-                                subtitle: part.options.isEmpty
-                                    ? null
-                                    : new Text(part.options.join(', ')));
-                          })))),
+                  child: new PartsList(fly.parts)),
               new Container(
                   key: new ObjectKey(Icons.build),
                   padding: const EdgeInsets.all(12.0),

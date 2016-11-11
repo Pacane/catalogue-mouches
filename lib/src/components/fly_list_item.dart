@@ -3,12 +3,12 @@ import 'package:mouches/src/domain/models/fly.dart';
 import 'package:slugify/slugify.dart';
 import 'dart:async';
 
-class FlyGridPhoto extends StatelessWidget {
+class FlyListItem extends StatelessWidget {
   final Fly fly;
   // TODO: Use DI
   final Slugify _slugifier = new Slugify();
 
-  FlyGridPhoto(this.fly);
+  FlyListItem(this.fly);
 
   String get photoUri => fly.photo.resourceUri;
   String get flySlug => _slugifier.slugify(fly.name);

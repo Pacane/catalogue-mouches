@@ -18,7 +18,8 @@ class FlyService {
             new Part('Chenille', ['Medium', 'Noire']),
             new Part('Hameçon Streamer', ['R73-9671', '2XH-3XL', 'Size 4']),
           ],
-          FlyType.streamer),
+          FlyType.streamer,
+          simulates: 'Sangsue'),
       new Fly(
           'Streamer',
           new Photo('lib/assets/streamer.jpg', 'Streamer noir et jaune'),
@@ -33,7 +34,8 @@ class FlyService {
             new Part('Chenille', ['Medium', 'Noire']),
             new Part('Hameçon Streamer', ['R73-9671', '2XH-3XL', 'Size 4']),
           ],
-          FlyType.streamer),
+          FlyType.streamer,
+          simulates: 'Mené'),
       new Fly(
           'Caddis',
           new Photo('lib/assets/caddis.jpg', 'Caddis fly'),
@@ -48,7 +50,8 @@ class FlyService {
             new Part('Chenille', ['Medium', 'Noire']),
             new Part('Hameçon Streamer', ['R73-9671', '2XH-3XL', 'Size 4']),
           ],
-          FlyType.dry),
+          FlyType.dry,
+          simulates: 'Tricoptera (Caddis)'),
     ];
   }
 }
