@@ -1,5 +1,5 @@
 name: mouches
-description: Browser de mouches à pêche.
+description: Catalogue de mouches à pêche.
 dependencies:
   flutter:
     sdk: flutter

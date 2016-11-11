@@ -1,12 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.yourcompany.flutterSample"
-    android:versionCode="1"
+    package="com.stacktrace.mouches"
+    android:versionCode="3"
     android:versionName="0.0.1">
 
     <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="21" />
     <uses-permission android:name="android.permission.INTERNET"/>
 
-    <application android:name="org.domokit.sky.shell.SkyApplication" android:label="mouches" android:icon="@mipmap/ic_launcher">
+    <application android:name="org.domokit.sky.shell.SkyApplication" android:label="Mouches à pêche" android:icon="@mipmap/ic_launcher">
         <activity android:name="org.domokit.sky.shell.SkyActivity"
                   android:launchMode="singleTop"
                   android:theme="@android:style/Theme.Black.NoTitleBar"
