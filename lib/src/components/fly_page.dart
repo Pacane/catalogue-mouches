@@ -37,7 +37,15 @@ class FlyPage extends StatelessWidget {
               new Container(
                   key: new ObjectKey(Icons.info),
                   padding: const EdgeInsets.all(12.0),
-                  child: new Text('Overview')),
+                  child: new MaterialList(
+                      children: ListItem
+                          .divideItems(context: context, items: <Widget>[
+                    new ListItem(
+                        title: new Text('Nom'), subtitle: new Text(fly.name)),
+                    new ListItem(
+                        title: new Text('Type'),
+                        subtitle: new Text(fly.type.typeAsString)),
+                  ]))),
               new Container(
                   key: new ObjectKey(Icons.shopping_cart),
                   padding: const EdgeInsets.all(12.0),

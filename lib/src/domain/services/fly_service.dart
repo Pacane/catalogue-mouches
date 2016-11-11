@@ -17,7 +17,8 @@ class FlyService {
             new Part('Tinsel', ['Plat', 'Multicolore', 'Réfléchissant']),
             new Part('Chenille', ['Medium', 'Noire']),
             new Part('Hameçon Streamer', ['R73-9671', '2XH-3XL', 'Size 4']),
-          ]),
+          ],
+          FlyType.streamer),
       new Fly(
           'Streamer',
           new Photo('lib/assets/streamer.jpg', 'Streamer noir et jaune'),
@@ -31,18 +32,23 @@ class FlyService {
             new Part('Tinsel', ['Plat', 'Multicolore', 'Réfléchissant']),
             new Part('Chenille', ['Medium', 'Noire']),
             new Part('Hameçon Streamer', ['R73-9671', '2XH-3XL', 'Size 4']),
-          ]),
-      new Fly('Caddis',
-          new Photo('lib/assets/caddis.jpg', 'Caddis fly'), <InstallStep>[
-        new InstallStep(
-          'Installer fil de montage',
-        )
-      ], <Part>[
-        new Part('Fil de montage'),
-        new Part('Tinsel', ['Plat', 'Multicolore', 'Réfléchissant']),
-        new Part('Chenille', ['Medium', 'Noire']),
-        new Part('Hameçon Streamer', ['R73-9671', '2XH-3XL', 'Size 4']),
-      ]),
+          ],
+          FlyType.streamer),
+      new Fly(
+          'Caddis',
+          new Photo('lib/assets/caddis.jpg', 'Caddis fly'),
+          <InstallStep>[
+            new InstallStep(
+              'Installer fil de montage',
+            )
+          ],
+          <Part>[
+            new Part('Fil de montage'),
+            new Part('Tinsel', ['Plat', 'Multicolore', 'Réfléchissant']),
+            new Part('Chenille', ['Medium', 'Noire']),
+            new Part('Hameçon Streamer', ['R73-9671', '2XH-3XL', 'Size 4']),
+          ],
+          FlyType.dry),
     ];
   }
 }
