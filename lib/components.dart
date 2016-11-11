@@ -1,3 +1,3 @@
-export 'src/components/fly_grid_photo.dart';
+export 'src/components/fly_list_item.dart';
 export 'src/components/fly_page.dart';
-export 'src/components/fly_selector.dart';
+export 'src/components/fly_list.dart';

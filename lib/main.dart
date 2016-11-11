@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:event_bus/event_bus.dart';
 import 'package:mouches/domain.dart';
-import 'package:mouches/src/components/fly_selector.dart';
+import 'package:mouches/src/components/fly_list.dart';
 import 'package:mouches/src/domain/models/fly.dart';
 import 'package:mouches/src/components/fly_page.dart';
 import 'package:slugify/slugify.dart';
@@ -26,13 +26,10 @@ class AppState extends State<App> {
 
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(routes: _kRoutes());
+    return new MaterialApp(
+        title: 'Montage de mouche', routes: _kRoutes());
   }
 }
-
-Widget wrapInScaffold(Widget w, String title) => new Scaffold(
-    appBar: new AppBar(title: new Text(title)),
-    body: new Padding(padding: const EdgeInsets.all(16.0), child: w));
 
 Map<String, WidgetBuilder> _kRoutes() {
   var flies = FlyService.getFlies();
@@ -40,13 +37,13 @@ Map<String, WidgetBuilder> _kRoutes() {
   var sluggifier = new Slugify();
 
   var routes = <String, WidgetBuilder>{
-    '/': (BuildContext c) => wrapInScaffold(new FlySelector(), 'Mouches'),
+    '/': (BuildContext c) => new FlySelector(),
   };
 
   flies.forEach((Fly f) {
     var flySlug = sluggifier.slugify(f.name);
-    routes.putIfAbsent('/fly/$flySlug',
-        () => (BuildContext c) => wrapInScaffold(new FlyPage(f), f.name));
+    routes.putIfAbsent(
+        '/fly/$flySlug', () => (BuildContext c) => new FlyPage(f));
   });
 
   return routes;

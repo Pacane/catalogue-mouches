@@ -10,9 +10,14 @@ class FlyPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Column(children: <Widget>[
-      new ClipRect(child: new Image.asset(photoUri, fit: ImageFit.fill)),
-      new ListItem(title: new Text('Matériel')),
-    ]);
+    return new Scaffold(
+        appBar: new AppBar(title: new Text(fly.name)),
+        body: new Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: new Column(children: <Widget>[
+              new ClipRect(
+                  child: new Image.asset(photoUri, fit: ImageFit.fill)),
+              new ListItem(title: new Text('Matériel')),
+            ])));
   }
 }

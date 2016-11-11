@@ -26,6 +26,18 @@ class FlyService {
           'Installer fil de montage',
         )
       ]),
+      new Fly('Caddis',
+          new Photo('lib/assets/caddis.jpg', 'Caddis fly'), <InstallStep>[
+        new InstallStep(
+          'Installer fil de montage',
+        )
+      ]),
+      new Fly('Caddis',
+          new Photo('lib/assets/caddis.jpg', 'Caddis fly'), <InstallStep>[
+        new InstallStep(
+          'Installer fil de montage',
+        )
+      ]),
     ];
   }
 }
