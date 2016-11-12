@@ -1,11 +1,9 @@
 class BuildStep {
   final String text;
-  List<String> notes = <String>[];
+  final List<String> notes = <String>[];
 
   BuildStep(this.text, {List<String> notes}) {
-    if (notes == null) {
-      this.notes = <String>[];
-    } else {
+    if (notes != null) {
       this.notes.addAll(notes);
     }
   }

@@ -32,16 +32,16 @@ class AppState extends State<App> {
 }
 
 Map<String, WidgetBuilder> _kRoutes() {
-  var flies = FlyService.getFlies();
+  final flies = FlyService.getFlies();
   // TODO: Use DI
-  var sluggifier = new Slugify();
+  final sluggifier = new Slugify();
 
-  var routes = <String, WidgetBuilder>{
+  final routes = <String, WidgetBuilder>{
     '/': (BuildContext c) => new FlySelector(),
   };
 
   flies.forEach((Fly f) {
-    var flySlug = sluggifier.slugify(f.name);
+    final flySlug = sluggifier.slugify(f.name);
     routes.putIfAbsent(
         '/fly/$flySlug', () => (BuildContext c) => new FlyPage(f));
   });
