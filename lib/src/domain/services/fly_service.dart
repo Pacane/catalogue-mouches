@@ -10,16 +10,16 @@ class FlyService {
           <BuildStep>[
             new BuildStep(
                 "Installer fil de montage et revenir jusqu'à l'oeillet"),
-            new BuildStep("Attacher le marabou (oeillet vers ardillon)",
-                notes: [
+            new BuildStep("Attacher le marabou", notes: [
+              "De l'oeillet vers l'ardillon"
                   'La longueur de la queue doit être environ de la longueur de la hampe'
-                ]),
+            ]),
             new BuildStep(
                 "Attacher les fils de krinkel flash à la hauteur de l'ardillon, laisser pendre à l'arrière."),
             new BuildStep(
                 "Attacher le hackle à la hauteur de l'ardillon, laisser pendre à l'arrière",
                 notes: [
-                  "Les fibre les plus longues du Hackle doivents aller à l'avant",
+                  "Les fibres les plus longues du Hackle doivents aller à l'avant",
                   "La longueur des fibres devraient être d'environ la même longueur que l'ouverture",
                   "Enlever les fibres webbées",
                   "Tirer les fibres de la tête de la plumes pour permettre de l'attacher plus facilement."
@@ -51,23 +51,22 @@ class FlyService {
                 "Installer fil de montage et revenir jusqu'à l'oeillet"),
             new BuildStep(
                 "Attacher fil métallique à partir de l'oeillet, jusqu'à l'ardillon.",
-                notes: [
-                  "(Note: Attacher le fil sur le côté opposé de l'hameçon)"
-                ]),
+                notes: ["Attacher le fil sur le côté opposé de l'hameçon"]),
             new BuildStep(
                 "Prendre Tinsel plat/large, couper un bout à 45° et l'attacher à partir de l'ardillon."),
             new BuildStep("Enrouler le Tinsel plat jusqu'à l'oeillet."),
-            new BuildStep(
-                "Enrouler le fil métallique (Environ 5 tours) jusqu'à l'oeillet."),
+            new BuildStep("Enrouler le fil métallique jusqu'à l'oeillet.",
+                notes: ["Environ 5 tours"]),
             new BuildStep("Prendre quelques brins de poil (jaune)", notes: [
-              "(Note: - La longueur doit être d'environ la même que celle de la hampe.)"
+              "La longueur doit être d'environ la même que celle de la hampe."
             ]),
             new BuildStep(
-                "Aligner les poils ensemble (pour qu'ils soient de la même longueur à l'arrière de l'hameçon) et les fixer au niveau de l'oeillet."),
-            new BuildStep("Refaire 6-7 avec des poils rouges",
-                notes: ["(Note: En prendre un peu moins)"]),
-            new BuildStep("Refaire 6-7 avec des poils jaunes",
-                notes: ["(Note: En prendre encore moins)"]),
+                "Aligner les poils ensemble et les fixer au niveau de l'oeillet.",
+                notes: ["Le côté des poils alignés doit être à l'arrière"]),
+            new BuildStep("Refaire les étapes #6 et #7 avec des poils rouges",
+                notes: ["En prendre un peu moins"]),
+            new BuildStep("Refaire les étapes #6 et #7 avec des poils jaunes",
+                notes: ["En prendre encore moins"]),
             new BuildStep(
                 "Prendre un ou plusieurs brins de krinkel flash, les doubler jusqu'au bout de la queue."),
             new BuildStep("Faire le noeud final"),
@@ -93,7 +92,10 @@ class FlyService {
             new BuildStep(
                 "Installer fil de montage et revenir jusqu'au 1/3 de la hampe."),
             new BuildStep(
-                "Istaller plumes de mallard à partir du 1/3 de la hampe. (Note: la plume doit dépasser d'environ la longueur de l'ouverture de l'hameçon)"),
+                "Istaller plumes de mallard à partir du 1/3 de la hampe.",
+                notes: [
+                  "La plume doit dépasser d'environ la longueur de l'ouverture de l'hameçon"
+                ]),
             new BuildStep(
                 "Fixer fil de laiton au niveau de l'ardillon, laisser pendre à l'arrière temporairement."),
             new BuildStep("Amener le fil de montage à l'ardillon"),
@@ -104,10 +106,14 @@ class FlyService {
                 "Enrouler le fil de laiton jusqu'au 1/3 pour former les segments d'abdomen/queue"),
             new BuildStep("Fixer tinsel plat, laisse pendre vers l'arrière"),
             new BuildStep(
-                "Prendre petit bout de plume de canard, le fixer vers l'arrière (Note: Replier quelques fibres du haut de la plume, pour faciliter la fixation. Les fibre de la plume doivent être vers le haut, pour que lorsque la plume sera retournée, les fibres ressembleront à des pattes)"),
+                "Prendre petit bout de plume de canard, le fixer vers l'arrière",
+                notes: [
+                  "Replier quelques fibres du haut de la plume, pour faciliter la fixation.",
+                  "Les fibres de la plume doivent être vers le haut, pour que lorsque la plume sera retournée, les fibres ressembleront à des pattes"
+                ]),
             new BuildStep("Couper l'excédant de la plume "),
-            new BuildStep(
-                "Enrouler fibres de paon pour former thorax (Note: À partir du 1/3 jusqu'à l'oeillet)"),
+            new BuildStep("Enrouler fibres de paon pour former thorax",
+                notes: ["À partir du 1/3 jusqu'à l'oeillet"]),
             new BuildStep("Fixer et couper l'excédant"),
             new BuildStep(
                 "Replier la plume pour former les pattes avant, et la fixer."),
