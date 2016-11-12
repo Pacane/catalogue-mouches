@@ -7,10 +7,32 @@ class FlyService {
       new Fly(
           'Woolly Bugger',
           new Photo('lib/assets/black_woolly_bugger.jpg', 'Woolly bugger noir'),
-          <InstallStep>[
-            new InstallStep(
-              'Installer fil de montage',
-            )
+          <BuildStep>[
+            new BuildStep(
+                "Installer fil de montage et revenir jusqu'à l'oeillet"),
+            new BuildStep("Attacher le marabou (oeillet vers ardillon)",
+                notes: [
+                  'La longueur de la queue doit être environ de la longueur de la hampe'
+                ]),
+            new BuildStep(
+                "Attacher les fils de krinkel flash à la hauteur de l'ardillon, laisser pendre à l'arrière."),
+            new BuildStep(
+                "Attacher le hackle à la hauteur de l'ardillon, laisser pendre à l'arrière",
+                notes: [
+                  "Les fibre les plus longues du Hackle doivents aller à l'avant",
+                  "La longueur des fibres devraient être d'environ la même longueur que l'ouverture",
+                  "Enlever les fibres webbées",
+                  "Tirer les fibres de la tête de la plumes pour permettre de l'attacher plus facilement."
+                ]),
+            new BuildStep(
+                "Attacher la chenille à partir de l'ardillon vers l'oeillet."),
+            new BuildStep(
+                "Enrouler le hackle autour de la chenille, jusqu'à l'oeillet."),
+            new BuildStep(
+                "(Optionnel) Prendre un brin de tinsel pour renforcer le hackle, en l'enroulant autour de celui ci, de l'ardillon vers l'oeillet."),
+            new BuildStep("Faire la fête de la mouche"),
+            new BuildStep("Noeud final"),
+            new BuildStep("Appliquer de la colle"),
           ],
           <Part>[
             new Part('Fil de montage'),
@@ -24,8 +46,8 @@ class FlyService {
       new Fly(
           'Streamer',
           new Photo('lib/assets/streamer.jpg', 'Streamer noir et jaune'),
-          <InstallStep>[
-            new InstallStep(
+          <BuildStep>[
+            new BuildStep(
               'Installer fil de montage',
             )
           ],
@@ -41,8 +63,8 @@ class FlyService {
       new Fly(
           'Caddis',
           new Photo('lib/assets/caddis.jpg', 'Caddis fly'),
-          <InstallStep>[
-            new InstallStep(
+          <BuildStep>[
+            new BuildStep(
               'Installer fil de montage',
             )
           ],

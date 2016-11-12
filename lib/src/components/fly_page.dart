@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mouches/domain.dart';
 import 'fly_overview.dart';
 import 'parts_list.dart';
+import 'build_steps_list.dart';
 
 class FlyPage extends StatelessWidget {
   final Fly fly;
@@ -47,7 +48,7 @@ class FlyPage extends StatelessWidget {
               new Container(
                   key: new ObjectKey(Icons.build),
                   padding: const EdgeInsets.all(12.0),
-                  child: new Text('Build')),
+                  child: new BuildStepsList(fly.steps)),
             ])));
   }
 }
