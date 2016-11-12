@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
+import '../utils.dart';
 
 class StepWidget extends StatelessWidget {
   final String mainText;
@@ -14,7 +15,7 @@ class StepWidget extends StatelessWidget {
     @required this.stepNumber,
   });
 
-  Iterable<Widget> _buildNotes(BuildContext context) {
+  List<Widget> _buildNotes(BuildContext context) {
     final theme = Theme.of(context);
 
     final notesWidgets = notes.map/*<Widget>*/((String note) {
@@ -33,17 +34,23 @@ class StepWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Iterable<Widget> notesWidgets = _buildNotes(context);
+    final notesWidgets = _buildNotes(context);
+
     return new Card(
-        child: new Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: new Row(children: [
-        new CircleAvatar(child: new Text(stepNumber.toString())),
-        new Flexible(
-            child: new Block(
-                padding: const EdgeInsets.only(left: 16.0),
-                children: [new Text(mainText)]..addAll(notesWidgets)))
-      ]),
-    ));
+      child: new Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: new Row(
+          children: [
+            new CircleAvatar(child: new Text(stepNumber.toString())),
+            new Flexible(
+                child: new Block(
+                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                    children: [new Text(mainText), notesWidgets]
+                        .fold([], partiallyFlattenList))),
+            new Icon(Icons.photo),
+          ],
+        ),
+      ),
+    );
   }
 }
