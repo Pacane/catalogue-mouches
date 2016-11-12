@@ -31,7 +31,7 @@ class FlyService {
             new BuildStep(
                 "(Optionnel) Prendre un brin de tinsel pour renforcer le hackle, en l'enroulant autour de celui ci, de l'ardillon vers l'oeillet."),
             new BuildStep("Faire la fête de la mouche"),
-            new BuildStep("Noeud final"),
+            new BuildStep("Faire le noeud final"),
             new BuildStep("Appliquer de la colle"),
           ],
           <Part>[
@@ -72,7 +72,7 @@ class FlyService {
             new BuildStep("Faire le noeud final"),
             new BuildStep(
                 "(Optionnel) Faire des yeux avec de la lacque 2 couleurs (noir/blanc)"),
-            new BuildStep("Mettre la colle"),
+            new BuildStep("Appliquer la colle"),
           ],
           <Part>[
             new Part('Fil de montage'),
