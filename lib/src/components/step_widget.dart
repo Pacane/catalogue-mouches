@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
+
 import '../utils.dart';
 
 class StepWidget extends StatelessWidget {
@@ -47,7 +48,6 @@ class StepWidget extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
                     children: [new Text(mainText), notesWidgets]
                         .fold([], partiallyFlattenList))),
-            new Icon(Icons.photo),
           ],
         ),
       ),
