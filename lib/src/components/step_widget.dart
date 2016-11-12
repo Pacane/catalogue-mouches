@@ -44,15 +44,6 @@ class StepWidget extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 16.0),
                 children: [new Text(mainText)]..addAll(notesWidgets)))
       ]),
-    )
-
-//      child: new Column(
-//        children: <Widget>[
-//          new Block(
-//              padding: const EdgeInsets.all(16.0),
-//              children: [new Text(mainText)]..addAll(notesWidgets))
-//        ],
-//      ),
-        );
+    ));
   }
 }
