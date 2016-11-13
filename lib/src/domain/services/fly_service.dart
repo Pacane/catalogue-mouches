@@ -182,6 +182,57 @@ class FlyService {
               'Nymphe de plécoptère',
               new Photo(
                   'lib/assets/stonefly_nymph_real.jpg', 'Stonefly nymph'))),
+      new Fly(
+          "Elk Hair Caddis",
+          new Photo('lib/assets/caddis.jpg', 'Elk Hair Caddis Fly'),
+          <BuildStep>[
+            new BuildStep("Mettre fil de montage"),
+            new BuildStep(
+                "Attacher le fil de cuivre près de l'oeillet, et l'amener vers l'arrière",
+                notes: ["Attacher le fil sur le côté de l'hameçon"]),
+            new BuildStep(
+                "Enrouler fil de montage avec dubbing à partir de l'ardillon, jusqu'à l'oeillet",
+                notes: [
+                  "Pour former le corps de la mouche",
+                  "Mettre vraiment peu de dubbing pour faciliter l'installation"
+                ]),
+            new BuildStep("Laisser le fil de montage au niveau de l'oeillet"),
+            new BuildStep(
+                "Prendre une petite plume, la fixer au niveau de l'oeillet, et l'enrouler jusqu'à l'ardillon",
+                notes: [
+                  "Les fibres doivent mesurer environ 1.5 fois la longueur de l'ouverture",
+                  "Une fois enroulée jusqu'à l'ardillon, la plume sera sécurisée par la fil de cuivre"
+                ]),
+            new BuildStep(
+                "Enrouler le fil de cuivre autour du hackle, jusqu'à l'oeillet."),
+            new BuildStep("Couper l'excédant de plume à l'arrière"),
+            new BuildStep("Prendre une touffe de poil de wapiti",
+                notes: ["Un peu plus longue que l'hameçon"]),
+            new BuildStep("Égaliser le poil dans un égalisateur", notes: [
+              "Les fibres inégales vont vers le bas, dans l'égalisateur"
+            ]),
+            new BuildStep("Attacher le poil de wapiti au niveau de l'oeillet",
+                notes: [
+                  "Les poils ne doivent pas dépasser derrière l'hameçon",
+                  "Le poil de wapiti ne doit pas être serré trop fort, on doit plutôt l'attacher solidement avec plusieurs tours de fil"
+                ]),
+            new BuildStep("Faire le noeud final", notes: [
+              "Faire un noeud à la main (ou avec outil) par dessus les poils relevés au niveau de l'oeillet"
+            ]),
+            new BuildStep(
+                "Couper les poils au niveau de l'oeil, de façon à former une tête triangulaire inverse"),
+            new BuildStep("Appliquer de la colle"),
+          ],
+          <Part>[
+            new Part("Hameçon Dry", ["R50-94840", "STD/STD", "Size 6 à 18"]),
+            new Part("Fil montage", ["Même couleur que le poil utilisé"]),
+            new Part("Fil de cuivre", ["Small"]),
+            new Part("Plumes de hackle pour mouche sèche (ou a bugger)"),
+            new Part("Poil de wapiti"),
+          ],
+          FlyType.dry,
+          simulates: new FlySimulation("Tricoptère",
+              new Photo('lib/assets/caddis_real.jpg', 'Plécoptère')))
     ];
   }
 }
