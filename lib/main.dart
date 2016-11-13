@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:event_bus/event_bus.dart';
 import 'package:mouches/domain.dart';
-import 'package:mouches/src/components/fly_list.dart';
+import 'package:mouches/src/components/fly_selector.dart';
 import 'package:mouches/src/domain/models/fly.dart';
 import 'package:mouches/src/components/fly_page.dart';
 import 'package:slugify/slugify.dart';

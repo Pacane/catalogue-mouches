@@ -44,7 +44,7 @@ class FlyService {
           simulates: new FlySimulation('Sangsue',
               new Photo('lib/assets/sangsue_eau.jpg', "Sangsue dans l'eau"))),
       new Fly(
-          'Streamer',
+          'Mickey Finn',
           new Photo('lib/assets/mickey_finn.jpg', 'Streamer noir et jaune'),
           <BuildStep>[
             new BuildStep(
