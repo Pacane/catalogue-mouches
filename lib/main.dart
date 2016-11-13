@@ -32,7 +32,7 @@ class AppState extends State<App> {
 }
 
 Map<String, WidgetBuilder> _kRoutes() {
-  final flies = FlyService.getFlies();
+  final flies = new FlyService().getFlies();
   // TODO: Use DI
   final sluggifier = new Slugify();
 

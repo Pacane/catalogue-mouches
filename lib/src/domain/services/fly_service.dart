@@ -2,7 +2,7 @@ import 'package:mouches/domain.dart';
 
 class FlyService {
   // TODO: Remove static with DI
-  static List<Fly> getFlies() {
+  List<Fly> getFlies() {
     return [
       new Fly(
           'Woolly Bugger',
@@ -136,7 +136,52 @@ class FlyService {
           simulates: new FlySimulation(
               'Nymphe de plécoptère',
               new Photo(
-                  'lib/assets/stonefly_nymph_real.jpg', 'Stonefly nymph')))
+                  'lib/assets/stonefly_nymph_real.jpg', 'Stonefly nymph'))),
+      new Fly(
+          'Nymphe Copper John',
+          new Photo('lib/assets/copper_john.jpg', 'Copper John Nymph'),
+          <BuildStep>[
+            new BuildStep("Installer bille",
+                notes: ["Par petit trou.", "Par le crochet"]),
+            new BuildStep("Enrouler du fil de montage pour bloquer la bille"),
+            new BuildStep(
+                "Prendre 2 pattes de caoutchouc, les attacher au niveau de la bille et les amener jusqu'à l'ardillon, en les enroulant de fil à montage."),
+            new BuildStep("Enrouler fil de cuivre.", notes: [
+              "Prendre 4-5 pouces de fil.",
+              "Enrouler à partir du 1/3 de l'hameçon, jusqu'à l'ardillon."
+            ]),
+            new BuildStep(
+                "Revenir avec le fil de montage en faisant de plus grands sillons.",
+                notes: ["Revenir jusqu'au 1/3 de l'hameçon."]),
+            new BuildStep("Couper l'excédant du fil de cuivre"),
+            new BuildStep("Attacher chenille au 1/3", notes: ["..."]),
+            new BuildStep("(Optionnel) Attacher hackle au niveau de la bille.",
+                notes: ["..."]),
+            new BuildStep(
+                "Ramener fil de montage jusqu'à la moitié du thorax."),
+            new BuildStep(
+                "Doubler une patte de caoutchouc pour former 2 pattes.",
+                notes: ["2 fois, pour faire 4 pattes"]),
+            new BuildStep("Ramener le fil de montage jusqu'à la bille."),
+            new BuildStep("Enrouler la chenille jusqu'à la bille.",
+                notes: ["En passant entre les pattes"]),
+            new BuildStep("Faire le noeud final."),
+            new BuildStep("Appliquer de la colle derrière la bille."),
+          ],
+          <Part>[
+            new Part('Hameçon de nymphe',
+                ['Tiemco 200R', 'Straight eye', '3X Long', 'Size 10']),
+            new Part('Bead gold', ['1/8', 'Medium']),
+            new Part('Pattes de caoutchouc'),
+            new Part('Fil de cuivre', ['Medium']),
+            new Part('Tinsel flash back', ['Mirage', 'Large']),
+            new Part('Crystal chenille', ['Medium', 'Black']),
+          ],
+          FlyType.nymph,
+          simulates: new FlySimulation(
+              'Nymphe de plécoptère',
+              new Photo(
+                  'lib/assets/stonefly_nymph_real.jpg', 'Stonefly nymph'))),
     ];
   }
 }

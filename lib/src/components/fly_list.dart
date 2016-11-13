@@ -16,7 +16,7 @@ class FlySelector extends StatelessWidget {
                   child: new ScrollableList(
                       scrollableKey: _scrollableKey,
                       itemExtent: 250.0,
-                      children: FlyService
+                      children: new FlyService()
                           .getFlies()
                           .map((Fly f) => new FlyListItem(f))))
             ])));
