@@ -165,6 +165,8 @@ class FlyService {
             new BuildStep("Sécuriser le fil de cuivre, et couper l'excédant."),
             new BuildStep("Attacher chenille au 1/3 de l'hameçon.",
                 notes: ["La laisser pendre."]),
+            new BuildStep("Attacher le tinsel flash back au 1/3 de l'hameçon",
+                notes: ["2 à 3 cm.", "Le laisser pendre à l'arrière."]),
             new BuildStep("Attacher hackle au niveau de la bille.",
                 notes: ["Le laisser pendre."]),
             new BuildStep(
