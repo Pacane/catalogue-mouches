@@ -49,12 +49,13 @@ class StepWidget extends StatelessWidget {
                     children: <dynamic>[new Text(mainText), notesWidgets]
                         .fold(<Widget>[], partiallyFlattenList/*<Widget>*/))),
             pictureUri == null
-                ? null
+                ? new Container()
                 : new IconButton(
                     icon: new Icon(Icons.photo),
                     onPressed: () =>
-                        ImageDialog.showImageDialog(context, pictureUri))
-          ]..removeWhere((w) => w == null),
+                        ImageDialog.showImageDialog(context, pictureUri),
+                  )
+          ],
         ),
       ),
     );
