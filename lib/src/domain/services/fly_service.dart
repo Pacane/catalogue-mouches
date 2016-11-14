@@ -207,13 +207,40 @@ class FlyService {
             )
           ],
           <Part>[
-            new Part('Hameçon de nymphe',
-                options: ['Tiemco 200R', 'Straight eye', '3X Long', 'Size 10']),
-            new Part('Bead gold', options: ['1/8', 'Medium']),
-            new Part('Pattes de caoutchouc'),
-            new Part('Fil de cuivre', options: ['Medium']),
-            new Part('Tinsel flash back', options: ['Mirage', 'Large']),
-            new Part('Crystal chenille', options: ['Medium', 'Black']),
+            new Part(
+              'Hameçon de nymphe',
+              options: ['Tiemco 200R', 'Straight eye', '3X Long', 'Size 10'],
+              photo: new Photo('lib/assets/copper_john/parts/nymph_hook.png'),
+            ),
+            new Part(
+              'Bead gold',
+              options: ['1/8', 'Medium'],
+              photo:
+                  new Photo('lib/assets/copper_john/parts/bead_gold_1_8.png'),
+            ),
+            new Part(
+              'Pattes de caoutchouc',
+              photo: new Photo(
+                  'lib/assets/copper_john/parts/rubber_legs_olive.png'),
+            ),
+            new Part(
+              'Fil de cuivre',
+              options: ['Medium'],
+              photo: new Photo(
+                  'lib/assets/copper_john/parts/copper_wire_medium.png'),
+            ),
+            new Part(
+              'Tinsel flash back',
+              options: ['Mirage', 'Large'],
+              photo: new Photo(
+                  'lib/assets/copper_john/parts/tinsel_flash_back.png'),
+            ),
+            new Part(
+              'Crystal chenille',
+              options: ['Medium', 'Black'],
+              photo: new Photo(
+                  'lib/assets/copper_john/parts/crystal_chenille.png'),
+            ),
             new Part("Hackle de woolly bugger", options: ['Noir ou brun'])
           ],
           FlyType.nymph,
