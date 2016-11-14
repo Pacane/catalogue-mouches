@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.stacktrace.mouches"
-    android:versionCode="9"
+    android:versionCode="10"
     android:versionName="0.0.1">
 
     <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="21" />
