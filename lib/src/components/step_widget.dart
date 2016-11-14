@@ -46,14 +46,14 @@ class StepWidget extends StatelessWidget {
             new Flexible(
                 child: new Block(
                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                    children: [new Text(mainText), notesWidgets]
-                        .fold([], partiallyFlattenList))),
+                    children: <dynamic>[new Text(mainText), notesWidgets]
+                        .fold(<Widget>[], partiallyFlattenList/*<Widget>*/))),
             pictureUri == null
                 ? null
                 : new IconButton(
                     icon: new Icon(Icons.photo),
-                    onPressed: () => ImageDialog.showImageDialog(
-                        context, pictureUri))
+                    onPressed: () =>
+                        ImageDialog.showImageDialog(context, pictureUri))
           ]..removeWhere((w) => w == null),
         ),
       ),

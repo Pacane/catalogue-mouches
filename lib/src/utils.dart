@@ -1,10 +1,10 @@
-import 'package:flutter/widgets.dart';
-
-List<Widget> partiallyFlattenList(List<Widget> prev, dynamic element) {
+List/*<T>*/ partiallyFlattenList/*<T>*/(List/*<T>*/ prev, dynamic element) {
   if (element is Iterable) {
-    prev.addAll(element as Iterable<Widget>);
+    // ignore: strong_mode_down_cast_composite
+    prev.addAll(element);
   } else {
-    prev.add(element as Widget);
+    // ignore: strong_mode_down_cast_composite
+    prev.add(element);
   }
   return prev;
 }
