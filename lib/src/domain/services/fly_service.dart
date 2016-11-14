@@ -149,28 +149,41 @@ class FlyService {
                 notes: ["Par petit trou.", "Par le crochet"]),
             new BuildStep("Enrouler du fil de montage pour bloquer la bille"),
             new BuildStep(
-                "Prendre 2 pattes de caoutchouc, les attacher au niveau de la bille et les amener jusqu'à l'ardillon, en les enroulant de fil à montage."),
+                "Prendre 2 pattes de caoutchouc, les attacher au niveau de la bille et les amener jusqu'à l'ardillon, en les enroulant de fil à montage.",
+                notes: ["Terminer sur le dessus de l'hameçon."]),
+            new BuildStep("Ramener fil de montage au 1/3 de l'hameçon"),
+            new BuildStep(
+                "Couper les pattes pour qu'elles soient de la longueur de l'ouverture de l'hameçon."),
             new BuildStep("Enrouler fil de cuivre.", notes: [
               "Prendre 4-5 pouces de fil.",
-              "Enrouler à partir du 1/3 de l'hameçon, jusqu'à l'ardillon."
+              "Enrouler à partir du 1/3 de l'hameçon, jusqu'à l'ardillon.",
+              "Enrouler de façon compacte, sans laisser de vide entre chaque tour de fil."
             ]),
             new BuildStep(
-                "Revenir avec le fil de montage en faisant de plus grands sillons.",
+                "Revenir avec le fil de cuivre en faisant de plus grands sillons.",
                 notes: ["Revenir jusqu'au 1/3 de l'hameçon."]),
-            new BuildStep("Couper l'excédant du fil de cuivre"),
-            new BuildStep("Attacher chenille au 1/3", notes: ["..."]),
-            new BuildStep("(Optionnel) Attacher hackle au niveau de la bille.",
-                notes: ["..."]),
+            new BuildStep("Sécuriser le fil de cuivre, et couper l'excédant."),
+            new BuildStep("Attacher chenille au 1/3 de l'hameçon.",
+                notes: ["La laisser pendre."]),
+            new BuildStep("Attacher hackle au niveau de la bille.",
+                notes: ["Le laisser pendre."]),
             new BuildStep(
                 "Ramener fil de montage jusqu'à la moitié du thorax."),
             new BuildStep(
                 "Doubler une patte de caoutchouc pour former 2 pattes.",
-                notes: ["2 fois, pour faire 4 pattes"]),
+                notes: [
+                  "Au milieu du thorax.",
+                  "2 fois, pour faire 4 pattes.",
+                ]),
             new BuildStep("Ramener le fil de montage jusqu'à la bille."),
             new BuildStep("Enrouler la chenille jusqu'à la bille.",
-                notes: ["En passant entre les pattes"]),
+                notes: ["En passant entre les pattes."]),
+            new BuildStep("Enrouler le hackle autour de la billes",
+                notes: ["1 ou 2 tours"]),
+            new BuildStep("Sécuriser le hackle, et couper l'excédant."),
             new BuildStep("Faire le noeud final."),
             new BuildStep("Appliquer de la colle derrière la bille."),
+            new BuildStep("Couper les pattes à la longueur désirée.")
           ],
           <Part>[
             new Part('Hameçon de nymphe',
@@ -180,6 +193,7 @@ class FlyService {
             new Part('Fil de cuivre', options: ['Medium']),
             new Part('Tinsel flash back', options: ['Mirage', 'Large']),
             new Part('Crystal chenille', options: ['Medium', 'Black']),
+            new Part("Hackle de woolly bugger", options: ['Noir ou brun'])
           ],
           FlyType.nymph,
           simulates: new FlySimulation(
