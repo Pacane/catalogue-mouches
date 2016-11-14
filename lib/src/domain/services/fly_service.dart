@@ -149,7 +149,7 @@ class FlyService {
             new BuildStep("Installer bille",
                 notes: ["Par petit trou.", "Par le crochet"],
                 photo: new Photo(
-                    'lib/assets/copper_john/parts/bead_gold/1_8.png',
+                    'lib/assets/copper_john/parts/bead_gold_1_8.png',
                     "Bead gold")),
             new BuildStep(
               "Enrouler du fil de montage pour bloquer la bille",
@@ -160,17 +160,22 @@ class FlyService {
             new BuildStep("Ramener fil de montage au 1/3 de l'hameçon"),
             new BuildStep(
                 "Couper les pattes pour qu'elles soient de la longueur de l'ouverture de l'hameçon."),
-            new BuildStep("Enrouler fil de cuivre.",
-                notes: [
-                  "Prendre 4-5 pouces de fil.",
-                  "Enrouler à partir du 1/3 de l'hameçon, jusqu'à l'ardillon.",
-                  "Enrouler de façon compacte, sans laisser de vide entre chaque tour de fil."
-                ],
-                photo: new Photo('lib/assets/copper_john/copper_wire.png')),
             new BuildStep(
-                "Revenir avec le fil de cuivre en faisant de plus grands sillons.",
-                notes: ["Revenir jusqu'au 1/3 de l'hameçon."]),
-            new BuildStep("Sécuriser le fil de cuivre, et couper l'excédant."),
+              "Enrouler fil de cuivre.",
+              notes: [
+                "Prendre 4-5 pouces de fil.",
+                "Enrouler à partir du 1/3 de l'hameçon, jusqu'à l'ardillon.",
+                "Enrouler de façon compacte, sans laisser de vide entre chaque tour de fil."
+              ],
+            ),
+            new BuildStep(
+              "Revenir avec le fil de cuivre en faisant de plus grands sillons.",
+              notes: ["Revenir jusqu'au 1/3 de l'hameçon."],
+            ),
+            new BuildStep(
+              "Sécuriser le fil de cuivre, et couper l'excédant.",
+              photo: new Photo('lib/assets/copper_john/copper_wire.png'),
+            ),
             new BuildStep("Attacher chenille au 1/3 de l'hameçon.",
                 notes: ["La laisser pendre."],
                 photo: new Photo('lib/assets/copper_john/chenille.png')),
@@ -196,7 +201,10 @@ class FlyService {
             new BuildStep("Sécuriser le hackle, et couper l'excédant."),
             new BuildStep("Faire le noeud final."),
             new BuildStep("Appliquer de la colle derrière la bille."),
-            new BuildStep("Couper les pattes à la longueur désirée.")
+            new BuildStep(
+              "Couper les pattes à la longueur désirée.",
+              photo: new Photo('lib/assets/copper_john/end_result.png'),
+            )
           ],
           <Part>[
             new Part('Hameçon de nymphe',

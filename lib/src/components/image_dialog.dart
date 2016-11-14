@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
@@ -8,6 +9,10 @@ class ImageDialog extends StatelessWidget {
     @required this.resourceUri,
   })
       : super(key: key);
+
+  static Future<dynamic> showSimulationImageDialog(
+          BuildContext c, String pictureUri) =>
+      showDialog(context: c, child: new ImageDialog(resourceUri: pictureUri));
 
   @override
   Widget build(BuildContext context) {

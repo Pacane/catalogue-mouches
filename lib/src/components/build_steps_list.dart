@@ -15,6 +15,7 @@ class BuildStepsList extends StatelessWidget {
       return new StepWidget(
         step.text,
         notes: step.notes,
+        pictureUri: step.photo?.resourceUri,
         stepNumber: index + 1,
       );
     });

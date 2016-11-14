@@ -11,10 +11,6 @@ class FlyOverview extends StatelessWidget {
   ListItem _buildSimpleOverviewRow(String title, String subtitle) =>
       new ListItem(title: new Text(title), subtitle: new Text(subtitle));
 
-  Future<dynamic> _showSimulationImageDialog(BuildContext c) => showDialog(
-      context: c,
-      child: new ImageDialog(resourceUri: fly.simulates.photo.resourceUri));
-
   List<ListItem> _buildItemsToDisplay(BuildContext c) {
     final itemsToDisplay = <ListItem>[];
 
@@ -24,10 +20,12 @@ class FlyOverview extends StatelessWidget {
       itemsToDisplay.add(new ListItem(
           trailing: new IconButton(
               icon: new Icon(Icons.photo),
-              onPressed: () => _showSimulationImageDialog(c)),
+              onPressed: () => ImageDialog.showSimulationImageDialog(
+                  c, fly.photo.resourceUri)),
           title: new Text('Imite'),
           subtitle: new Text(fly.simulates.name),
-          onTap: () => _showSimulationImageDialog(c)));
+          onTap: () => ImageDialog.showSimulationImageDialog(
+              c, fly.simulates.photo.resourceUri)));
     }
 
     return itemsToDisplay;

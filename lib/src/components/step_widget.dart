@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
-
+import 'image_dialog.dart';
 import '../utils.dart';
 
 class StepWidget extends StatelessWidget {
@@ -48,7 +48,13 @@ class StepWidget extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
                     children: [new Text(mainText), notesWidgets]
                         .fold([], partiallyFlattenList))),
-          ],
+            pictureUri == null
+                ? null
+                : new IconButton(
+                    icon: new Icon(Icons.photo),
+                    onPressed: () => ImageDialog.showSimulationImageDialog(
+                        context, pictureUri))
+          ]..removeWhere((w) => w == null),
         ),
       ),
     );
