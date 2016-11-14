@@ -52,7 +52,7 @@ class StepWidget extends StatelessWidget {
                 ? null
                 : new IconButton(
                     icon: new Icon(Icons.photo),
-                    onPressed: () => ImageDialog.showSimulationImageDialog(
+                    onPressed: () => ImageDialog.showImageDialog(
                         context, pictureUri))
           ]..removeWhere((w) => w == null),
         ),

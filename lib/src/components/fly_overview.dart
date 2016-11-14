@@ -18,14 +18,13 @@ class FlyOverview extends StatelessWidget {
     itemsToDisplay.add(_buildSimpleOverviewRow('Type', fly.type.typeAsString));
     if (fly.simulates != null) {
       itemsToDisplay.add(new ListItem(
-          trailing: new IconButton(
-              icon: new Icon(Icons.photo),
-              onPressed: () => ImageDialog.showSimulationImageDialog(
-                  c, fly.photo.resourceUri)),
-          title: new Text('Imite'),
-          subtitle: new Text(fly.simulates.name),
-          onTap: () => ImageDialog.showSimulationImageDialog(
-              c, fly.simulates.photo.resourceUri)));
+        title: new Text('Imite'),
+        subtitle: new Text(fly.simulates.name),
+        trailing: new IconButton(
+            icon: new Icon(Icons.photo),
+            onPressed: () => ImageDialog.showImageDialog(
+                c, fly.simulates.photo.resourceUri)),
+      ));
     }
 
     return itemsToDisplay;

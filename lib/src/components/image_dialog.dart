@@ -10,7 +10,7 @@ class ImageDialog extends StatelessWidget {
   })
       : super(key: key);
 
-  static Future<dynamic> showSimulationImageDialog(
+  static Future<dynamic> showImageDialog(
           BuildContext c, String pictureUri) =>
       showDialog(context: c, child: new ImageDialog(resourceUri: pictureUri));
 
