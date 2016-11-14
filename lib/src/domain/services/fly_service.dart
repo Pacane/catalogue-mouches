@@ -143,32 +143,42 @@ class FlyService {
                   'lib/assets/stonefly_nymph_real.jpg', 'Stonefly nymph'))),
       new Fly(
           'Nymphe Copper John',
-          new Photo('lib/assets/copper_john.jpg', 'Copper John Nymph'),
+          new Photo(
+              'lib/assets/copper_john/end_result.png', 'Copper John Nymph'),
           <BuildStep>[
             new BuildStep("Installer bille",
-                notes: ["Par petit trou.", "Par le crochet"]),
-            new BuildStep("Enrouler du fil de montage pour bloquer la bille"),
+                notes: ["Par petit trou.", "Par le crochet"],
+                photo: new Photo(
+                    'lib/assets/copper_john/parts/bead_gold/1_8.png',
+                    "Bead gold")),
+            new BuildStep(
+              "Enrouler du fil de montage pour bloquer la bille",
+            ),
             new BuildStep(
                 "Prendre 2 pattes de caoutchouc, les attacher au niveau de la bille et les amener jusqu'à l'ardillon, en les enroulant de fil à montage.",
                 notes: ["Terminer sur le dessus de l'hameçon."]),
             new BuildStep("Ramener fil de montage au 1/3 de l'hameçon"),
             new BuildStep(
                 "Couper les pattes pour qu'elles soient de la longueur de l'ouverture de l'hameçon."),
-            new BuildStep("Enrouler fil de cuivre.", notes: [
-              "Prendre 4-5 pouces de fil.",
-              "Enrouler à partir du 1/3 de l'hameçon, jusqu'à l'ardillon.",
-              "Enrouler de façon compacte, sans laisser de vide entre chaque tour de fil."
-            ]),
+            new BuildStep("Enrouler fil de cuivre.",
+                notes: [
+                  "Prendre 4-5 pouces de fil.",
+                  "Enrouler à partir du 1/3 de l'hameçon, jusqu'à l'ardillon.",
+                  "Enrouler de façon compacte, sans laisser de vide entre chaque tour de fil."
+                ],
+                photo: new Photo('lib/assets/copper_john/copper_wire.png')),
             new BuildStep(
                 "Revenir avec le fil de cuivre en faisant de plus grands sillons.",
                 notes: ["Revenir jusqu'au 1/3 de l'hameçon."]),
             new BuildStep("Sécuriser le fil de cuivre, et couper l'excédant."),
             new BuildStep("Attacher chenille au 1/3 de l'hameçon.",
-                notes: ["La laisser pendre."]),
+                notes: ["La laisser pendre."],
+                photo: new Photo('lib/assets/copper_john/chenille.png')),
             new BuildStep("Attacher le tinsel flash back au 1/3 de l'hameçon",
                 notes: ["2 à 3 cm.", "Le laisser pendre à l'arrière."]),
             new BuildStep("Attacher hackle au niveau de la bille.",
-                notes: ["Le laisser pendre."]),
+                notes: ["Le laisser pendre."],
+                photo: new Photo('lib/assets/copper_john/hackle.png')),
             new BuildStep(
                 "Ramener fil de montage jusqu'à la moitié du thorax."),
             new BuildStep(
@@ -176,7 +186,8 @@ class FlyService {
                 notes: [
                   "Au milieu du thorax.",
                   "2 fois, pour faire 4 pattes.",
-                ]),
+                ],
+                photo: new Photo('lib/assets/copper_john/rubber_legs.png')),
             new BuildStep("Ramener le fil de montage jusqu'à la bille."),
             new BuildStep("Enrouler la chenille jusqu'à la bille.",
                 notes: ["En passant entre les pattes."]),
