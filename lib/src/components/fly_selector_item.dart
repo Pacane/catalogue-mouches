@@ -19,11 +19,14 @@ class FlySelectorItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Widget image = new GestureDetector(
-        onTap: () => _onTap(context),
+      onTap: () => _onTap(context),
+      child: new SizedBox.expand(
         child: new Hero(
             key: new Key(photoUri),
             tag: photoUri,
-            child: new Image.asset(photoUri, fit: ImageFit.cover)));
+            child: new Image.asset(photoUri, fit: ImageFit.cover)),
+      ),
+    );
 
     return new GridTile(
         footer: new GestureDetector(
