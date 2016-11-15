@@ -196,6 +196,8 @@ class FlyService {
             new BuildStep("Ramener le fil de montage jusqu'à la bille."),
             new BuildStep("Enrouler la chenille jusqu'à la bille.",
                 notes: ["En passant entre les pattes."]),
+            new BuildStep("Attacher le tinsel au niveau de la bille",
+                notes: ["Pour former la carapace de la larve."]),
             new BuildStep("Enrouler le hackle autour de la billes",
                 notes: ["1 ou 2 tours"]),
             new BuildStep("Sécuriser le hackle, et couper l'excédant."),
@@ -241,7 +243,8 @@ class FlyService {
               photo: new Photo(
                   'lib/assets/copper_john/parts/crystal_chenille.png'),
             ),
-            new Part("Hackle de woolly bugger", options: ['Noir ou brun'])
+            new Part("Hackle de woolly bugger", options: ['Noir ou brun']),
+            new Part("Dubbing synthétique", options: ["Couleur terre/olive"]),
           ],
           FlyType.nymph,
           simulates: new FlySimulation(
