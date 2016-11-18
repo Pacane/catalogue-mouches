@@ -43,6 +43,7 @@ class FlyService {
                 options: ['R73-9671', '2XH-3XL', 'Size 4']),
           ],
           FlyType.streamer,
+          FlyDifficulty.easy,
           simulates: new FlySimulation('Sangsue',
               new Photo('lib/assets/sangsue_eau.jpg', "Sangsue dans l'eau"))),
       new Fly(
@@ -86,6 +87,7 @@ class FlyService {
             new Part('Krinkel flash mirror', options: ['Bleu']),
           ],
           FlyType.streamer,
+          FlyDifficulty.easy,
           simulates: new FlySimulation('Menés',
               new Photo('lib/assets/minnows.jpg', "Menés dans l'eau"))),
       new Fly(
@@ -137,6 +139,7 @@ class FlyService {
                 options: ['R74-9472', '2XH/4XL', 'Size 8']),
           ],
           FlyType.nymph,
+          FlyDifficulty.normal,
           simulates: new FlySimulation(
               'Nymphe de plécoptère',
               new Photo(
@@ -247,6 +250,7 @@ class FlyService {
             new Part("Dubbing synthétique", options: ["Couleur terre/olive"]),
           ],
           FlyType.nymph,
+          FlyDifficulty.hard,
           simulates: new FlySimulation(
               'Nymphe de plécoptère',
               new Photo(
@@ -302,6 +306,7 @@ class FlyService {
             new Part("Poil de wapiti"),
           ],
           FlyType.dry,
+          FlyDifficulty.hard,
           simulates: new FlySimulation("Tricoptère",
               new Photo('lib/assets/caddis_real.jpg', 'Plécoptère')))
     ];
