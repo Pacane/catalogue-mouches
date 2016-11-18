@@ -306,7 +306,7 @@ class FlyService {
             new Part("Poil de wapiti"),
           ],
           FlyType.dry,
-          FlyDifficulty.hard,
+          FlyDifficulty.normal,
           simulates: new FlySimulation("Tricoptère",
               new Photo('lib/assets/caddis_real.jpg', 'Plécoptère')))
     ];
