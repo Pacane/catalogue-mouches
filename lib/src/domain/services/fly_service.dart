@@ -349,7 +349,8 @@ class FlyService {
             new Part("Poil de queue d'écureil"),
             new Part("Tinsel", options: ["Large", "Or"])
           ],
-          FlyType.dry)
+          FlyType.dry,
+          FlyDifficulty.hard)
     ];
   }
 }
