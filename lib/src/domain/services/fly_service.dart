@@ -308,7 +308,33 @@ class FlyService {
           'Muddler Minnow',
           new Photo(
               'lib/assets/muddler_minnow/end_result.png', 'Muddle Minnow'),
-          [],
+          [
+            new BuildStep("Installer fil de montage",
+                notes: ["Laisser 2 longueurs d'oeillet à l'avant"]),
+            new BuildStep("Amener fil de montage jusqu'à l'ardillon"),
+            new BuildStep(
+                "Attacher fibres d'ailes de dindon pour former queue"),
+            new BuildStep("Ramener fil de montage à l'avant"),
+            new BuildStep("Installer le tinsel plat",
+                notes: ["Faire l'aller-retour de la hampe"]),
+            new BuildStep("Attacher touffe de poils de chevreuil",
+                notes: ["À 2 longueurs d'oeillet"]),
+            new BuildStep("Attacher fibres de plumes de dindon", notes: [
+              "À 1 longueurs d'oeillet",
+              "Prendre les fibres intérieures des plumes gauche et droite",
+              "Par dessus le poil d'écureuil"
+            ]),
+            new BuildStep("Attacher poils de chevreuil", notes: [
+              "Les poiles doivent arriver environ au 3/4 des plumes de dindon"
+            ]),
+            new BuildStep("Faire noeud final",
+                notes: ["Replier les poils de chevreuil vers l'arrière"]),
+            new BuildStep(
+                "Couper les poils de chevreuil pour former la tête de la mouche",
+                notes: [
+                  "Prendre la mouche dans ses mains pour faciliter la tâche"
+                ]),
+          ],
           [
             new Part("Hameçon Streamer", options: ["Size 6"]),
             new Part("Fil de montage",
@@ -322,7 +348,3 @@ class FlyService {
     ];
   }
 }
-
-/*
-
- */
