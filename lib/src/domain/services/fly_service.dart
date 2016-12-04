@@ -303,7 +303,26 @@ class FlyService {
           ],
           FlyType.dry,
           simulates: new FlySimulation("Tricoptère",
-              new Photo('lib/assets/caddis_real.jpg', 'Plécoptère')))
+              new Photo('lib/assets/caddis_real.jpg', 'Plécoptère'))),
+      new Fly(
+          'Muddler Minnow',
+          new Photo(
+              'lib/assets/muddler_minnow/end_result.png', 'Muddle Minnow'),
+          [],
+          [
+            new Part("Hameçon Streamer", options: ["Size 6"]),
+            new Part("Fil de montage",
+                options: ["Blanc", "Plat", "Danville's 210 flat waxed"]),
+            new Part("Poils de chevreuil"),
+            new Part("2 ailes de dindon"),
+            new Part("Poil de queue d'écureil"),
+            new Part("Tinsel", options: ["Large", "Or"])
+          ],
+          FlyType.dry)
     ];
   }
 }
+
+/*
+
+ */
