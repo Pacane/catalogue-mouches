@@ -12,9 +12,10 @@ class FlyOverview extends StatelessWidget {
 
   List<ListItem> _buildItemsToDisplay(BuildContext c) {
     final itemsToDisplay = <ListItem>[];
-
     itemsToDisplay.add(_buildSimpleOverviewRow('Nom', fly.name));
     itemsToDisplay.add(_buildSimpleOverviewRow('Type', fly.type.typeAsString));
+    itemsToDisplay.add(_buildSimpleOverviewRow(
+        'Difficulté', fly.difficulty.difficultyAsString));
     if (fly.simulates != null) {
       itemsToDisplay.add(new ListItem(
         title: new Text('Imite'),
