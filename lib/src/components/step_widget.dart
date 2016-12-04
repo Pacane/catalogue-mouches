@@ -19,7 +19,7 @@ class StepWidget extends StatelessWidget {
   List<Widget> _buildNotes(BuildContext context) {
     final theme = Theme.of(context);
 
-    final notesWidgets = notes.map/*<Widget>*/((String note) {
+    final notesWidgets = notes.map<Widget>((String note) {
       return new Padding(
         padding: const EdgeInsets.symmetric(vertical: 10.0),
         child: new Text(note, style: theme.textTheme.caption),
@@ -47,7 +47,7 @@ class StepWidget extends StatelessWidget {
                 child: new Block(
                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
                     children: <dynamic>[new Text(mainText), notesWidgets]
-                        .fold(<Widget>[], partiallyFlattenList/*<Widget>*/))),
+                        .fold(<Widget>[], partiallyFlattenList))),
             pictureUri == null
                 ? new Container()
                 : new IconButton(
