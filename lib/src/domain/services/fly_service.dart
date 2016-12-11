@@ -11,11 +11,11 @@ class FlyService {
             new BuildStep(
                 "Installer fil de montage et revenir jusqu'à l'oeillet"),
             new BuildStep("Attacher le marabou", notes: [
-              "De l'oeillet vers l'ardillon"
-                  'La longueur de la queue doit être environ de la longueur de la hampe'
+              "De l'oeillet vers l'ardillon",
+              'La longueur de la queue doit être environ de la longueur de la hampe'
             ]),
             new BuildStep(
-                "Attacher les fils de krinkel flash à la hauteur de l'ardillon, laisser pendre à l'arrière."),
+                "Attacher les fils de krinkle flash à la hauteur de l'ardillon, laisser pendre à l'arrière."),
             new BuildStep(
                 "Attacher le hackle à la hauteur de l'ardillon, laisser pendre à l'arrière",
                 notes: [
@@ -71,7 +71,7 @@ class FlyService {
             new BuildStep("Refaire les étapes #6 et #7 avec des poils jaunes",
                 notes: ["En prendre encore moins"]),
             new BuildStep(
-                "Prendre un ou plusieurs brins de krinkel flash, les doubler jusqu'au bout de la queue."),
+                "Prendre un ou plusieurs brins de krinkle flash, les doubler jusqu'au bout de la queue."),
             new BuildStep("Faire le noeud final"),
             new BuildStep(
                 "(Optionnel) Faire des yeux avec de la lacque 2 couleurs (noir/blanc)"),
@@ -84,7 +84,7 @@ class FlyService {
             new Part('Temple Dog Orkla 2 couleurs', options: ['Rouge', 'Noir']),
             new Part('Hameçon Streamer',
                 options: ['R75-79580', '2XH-5XL', 'Size 4']),
-            new Part('Krinkel flash mirror', options: ['Bleu']),
+            new Part('Krinkle flash mirror', options: ['Bleu']),
           ],
           FlyType.streamer,
           FlyDifficulty.easy,
