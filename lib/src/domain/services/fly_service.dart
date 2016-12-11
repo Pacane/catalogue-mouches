@@ -350,7 +350,56 @@ class FlyService {
             new Part("Tinsel", options: ["Large", "Or"])
           ],
           FlyType.dry,
-          FlyDifficulty.hard)
+          FlyDifficulty.hard),
+      new Fly(
+          'Mickey bad',
+          new Photo('lib/assets/muddler_minnow/end_result.png', 'Mickey bad'),
+          [
+            new BuildStep("Installer fil de montage",
+                notes: ["Laisser 2 longueurs d'oeillet à l'avant"]),
+            new BuildStep("Installer la pair de yeux.", notes: [
+              "Laisser 1 longueur d'oeillet devant les yeux",
+              "Pour sécuriser les yeux, enrouler le fil de montage en formant des huits autour de la pièce"
+            ]),
+            new BuildStep(
+                "Doubler fil Trilene, et l'attacher à l'arrière des yeux, jusqu'à l'ardillon.",
+                notes: [
+                  "Une boucle de Trilene d'environ la même longueur que la hampe doit pendre à l'arrière de l'hameçon"
+                ]),
+            new BuildStep(
+                "Enrouler beaucoup de fil de montage autour de la hampe, pour sécuriser la boucle de Trilene"),
+            new BuildStep("Appliquer beaucoup de colle sur le Trilene"),
+            new BuildStep(
+                "Prendre bout de lapin et l'attacher au niveau de l'ardillon.",
+                notes: [
+                  "Laisser le lapin dépasser derrière, de la longueur de l'hameçon qui ira sur la boucle de Trilene.",
+                  "Laisser le lapin dépasser à l'avant, de la longueur de la hampe"
+                ]),
+            new BuildStep("Installer krinkle flash devant la queue de lapin"),
+            new BuildStep("Attacher chenille à l'arrière, laisser pendre"),
+            new BuildStep(
+                "Amener fil de montage à l'avant, attacher hackle derrière les yeux, et le laisser pendre vers l'avant"),
+            new BuildStep("Enrouler chenille vers l'avant"),
+            new BuildStep("Enrouler le hackle", notes: [
+              "Envoyer les fibres du hackle vers l'arrière en enroulant"
+            ]),
+          ],
+          [
+            new Part("Hameçon Streamer", options: ["Size 4"]),
+            new Part("Fil de montage", options: ["Noir"]),
+            new Part("Lapin", options: [
+              "Cette mouche peut se faire dans le rose, mauve, olive, orange, etc."
+            ]),
+            new Part("Hackle de bugger",
+                options: ["De couleur similaire au lapin choisi"]),
+            new Part("Chenille", options: [
+              "Medium/Large",
+              "De couleur similaire au lapin choisi"
+            ]),
+            new Part("Krinkle flash"),
+          ],
+          FlyType.streamer,
+          FlyDifficulty.easy)
     ];
   }
 }
