@@ -121,7 +121,7 @@ class FlyService {
                 notes: ["À partir du 1/3 jusqu'à l'oeillet"]),
             new BuildStep("Fixer et couper l'excédant"),
             new BuildStep(
-                "Replier la plume pour former les pattes avant, et la fixer."),
+                "Replier la plume pour former les pattes avant et la fixer."),
             new BuildStep(
                 "Replier le tinsel par dessus le thorax (pour faire la carapace) et le fixer"),
             new BuildStep("Faire la tête avec le fil de montage"),
@@ -176,7 +176,7 @@ class FlyService {
               notes: ["Revenir jusqu'au 1/3 de l'hameçon."],
             ),
             new BuildStep(
-              "Sécuriser le fil de cuivre, et couper l'excédant.",
+              "Sécuriser le fil de cuivre et couper l'excédant.",
               photo: new Photo('lib/assets/copper_john/copper_wire.png'),
             ),
             new BuildStep("Attacher chenille au 1/3 de l'hameçon.",
@@ -203,7 +203,7 @@ class FlyService {
                 notes: ["Pour former la carapace de la larve."]),
             new BuildStep("Enrouler le hackle autour de la billes",
                 notes: ["1 ou 2 tours"]),
-            new BuildStep("Sécuriser le hackle, et couper l'excédant."),
+            new BuildStep("Sécuriser le hackle et couper l'excédant."),
             new BuildStep("Faire le noeud final."),
             new BuildStep("Appliquer de la colle derrière la bille."),
             new BuildStep(
@@ -261,7 +261,7 @@ class FlyService {
           <BuildStep>[
             new BuildStep("Mettre fil de montage"),
             new BuildStep(
-                "Attacher le fil de cuivre près de l'oeillet, et l'amener vers l'arrière",
+                "Attacher le fil de cuivre près de l'oeillet et l'amener vers l'arrière",
                 notes: ["Attacher le fil sur le côté de l'hameçon"]),
             new BuildStep(
                 "Enrouler fil de montage avec dubbing à partir de l'ardillon, jusqu'à l'oeillet",
@@ -271,7 +271,7 @@ class FlyService {
                 ]),
             new BuildStep("Laisser le fil de montage au niveau de l'oeillet"),
             new BuildStep(
-                "Prendre une petite plume, la fixer au niveau de l'oeillet, et l'enrouler jusqu'à l'ardillon",
+                "Prendre une petite plume, la fixer au niveau de l'oeillet et l'enrouler jusqu'à l'ardillon",
                 notes: [
                   "Les fibres doivent mesurer environ 1.5 fois la longueur de l'ouverture",
                   "Une fois enroulée jusqu'à l'ardillon, la plume sera sécurisée par la fil de cuivre"
@@ -362,7 +362,7 @@ class FlyService {
               "Pour sécuriser les yeux, enrouler le fil de montage en formant des huits autour de la pièce"
             ]),
             new BuildStep(
-                "Doubler fil Trilene, et l'attacher à l'arrière des yeux, jusqu'à l'ardillon.",
+                "Doubler fil Trilene et l'attacher à l'arrière des yeux, jusqu'à l'ardillon.",
                 notes: [
                   "Une boucle de Trilene d'environ la même longueur que la hampe doit pendre à l'arrière de l'hameçon"
                 ]),
@@ -378,7 +378,7 @@ class FlyService {
             new BuildStep("Installer krinkle flash devant la queue de lapin"),
             new BuildStep("Attacher chenille à l'arrière, laisser pendre"),
             new BuildStep(
-                "Amener fil de montage à l'avant, attacher hackle derrière les yeux, et le laisser pendre vers l'avant"),
+                "Amener fil de montage à l'avant, attacher hackle derrière les yeux et le laisser pendre vers l'avant"),
             new BuildStep("Enrouler chenille vers l'avant"),
             new BuildStep("Enrouler le hackle", notes: [
               "Envoyer les fibres du hackle vers l'arrière en enroulant"
@@ -405,17 +405,17 @@ class FlyService {
           new Photo('lib/assets/muddler_minnow/end_result.png', 'Mickey bad'),
           <BuildStep>[
             new BuildStep("Installer fil de montage",
-                notes: ["En mettre partout, et revenir que 1/3 de la hampe."]),
+                notes: ["En mettre partout et revenir que 1/3 de la hampe."]),
             new BuildStep(
                 "Prendre 2 pointes de plumes de hackle Grizzly de la même longueur"),
             new BuildStep(
                 "Installer les pointes de chaque côté de la hampe pour former les ailes de la mouche",
                 notes: [
                   "Installer les plumes au 1/3 de la hampe (au milieu du thorax)",
-                  "Fixer les plumes vers l'arrière pour commencer, et les redresser avec le fil de montage en passant à l'arrière de chaque plume"
+                  "Fixer les plumes vers l'arrière pour commencer et les redresser avec le fil de montage en passant à l'arrière de chaque plume"
                 ]),
             new BuildStep(
-                "Prendre des fibres d'une plume de hackle grizzly, et des fibres d'une plume de hackle brune."),
+                "Prendre des fibres d'une plume de hackle grizzly et des fibres d'une plume de hackle brune."),
             new BuildStep(
                 "Former une queue à l'arrière de l'hameçon avec les fibres",
                 notes: [
@@ -428,9 +428,9 @@ class FlyService {
                 "Prendre du dubbing gris et en enrouler jusqu'à l'arrière des ailes"),
             new BuildStep("Amener le fil de montage au niveau de l'oeillet."),
             new BuildStep(
-                "Enrouler le hackle grizzly jusqu'à l'oeillet, et le fixer"),
+                "Enrouler le hackle grizzly jusqu'à l'oeillet et le fixer"),
             new BuildStep(
-                "Enrouler le hackle brun jusqu'à l'oeillet, et le fixer"),
+                "Enrouler le hackle brun jusqu'à l'oeillet et le fixer"),
             new BuildStep("Faire le noeud final"),
             new BuildStep("Mettre la colle"),
           ],
