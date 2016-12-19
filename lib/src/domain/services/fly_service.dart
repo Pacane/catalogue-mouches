@@ -422,10 +422,10 @@ class FlyService {
                   "La longueur de la queue doit être d'environ la longueur de l'ouverture"
                 ]),
             new BuildStep(
-                "Prendre 1 plume de hackle grizzly et 1 plume de hackle brun, les fixer au niveau de l'ardillon.",
+                "Prendre 1 plume de hackle grizzly et 1 plume de hackle brune, les fixer au niveau de l'ardillon.",
                 notes: ["Les laisser pendre à l'arrière"]),
             new BuildStep(
-                "Prendre du dubbing gris, et en enrouler jusqu'à l'arrière des ailes"),
+                "Prendre du dubbing gris et en enrouler jusqu'à l'arrière des ailes"),
             new BuildStep("Amener le fil de montage au niveau de l'oeillet."),
             new BuildStep(
                 "Enrouler le hackle grizzly jusqu'à l'oeillet, et le fixer"),
