@@ -399,7 +399,51 @@ class FlyService {
             new Part("Krinkle flash"),
           ],
           FlyType.streamer,
-          FlyDifficulty.easy)
+          FlyDifficulty.easy),
+      new Fly(
+          'Adams',
+          new Photo('lib/assets/muddler_minnow/end_result.png', 'Mickey bad'),
+          <BuildStep>[
+            new BuildStep("Installer fil de montage",
+                notes: ["En mettre partout, et revenir que 1/3 de la hampe."]),
+            new BuildStep(
+                "Prendre 2 pointes de plumes de hackle Grizzly de la même longueur"),
+            new BuildStep(
+                "Installer les pointes de chaque côté de la hampe pour former les ailes de la mouche",
+                notes: [
+                  "Installer les plumes au 1/3 de la hampe (au milieu du thorax)",
+                  "Fixer les plumes vers l'arrière pour commencer, et les redresser avec le fil de montage en passant à l'arrière de chaque plume"
+                ]),
+            new BuildStep(
+                "Prendre des fibres d'une plume de hackle grizzly, et des fibres d'une plume de hackle brun."),
+            new BuildStep(
+                "Former une queue à l'arrière de l'hameçon avec les fibres",
+                notes: [
+                  "La longueur de la queue doit être d'environ la longueur de l'ouverture"
+                ]),
+            new BuildStep(
+                "Prendre 1 plume de hackle grizzly et 1 plume de hackle brun, les fixer au niveau de l'ardillon.",
+                notes: ["Les laisser pendre à l'arrière"]),
+            new BuildStep(
+                "Prendre du dubbing gris, et en enrouler jusqu'à l'arrière des ailes"),
+            new BuildStep("Amener le fil de montage au niveau de l'oeillet."),
+            new BuildStep(
+                "Enrouler le hackle grizzly jusqu'à l'oeillet, et le fixer"),
+            new BuildStep(
+                "Enrouler le hackle brun jusqu'à l'oeillet, et le fixer"),
+            new BuildStep("Faire le noeud final"),
+            new BuildStep("Mettre la colle"),
+          ],
+          <Part>[
+            new Part("Plumes de hackle", options: ["Grizzly"]),
+            new Part("Plumes de hackle", options: ["Brune"]),
+            new Part("Fil de montage"),
+            new Part("Dubbing", options: ["Gris"]),
+            new Part("Hameçon Dry",
+                options: ["R50-94840", "STD/STD", "Size 10"]),
+          ],
+          FlyType.dry,
+          FlyDifficulty.normal)
     ];
   }
 }
