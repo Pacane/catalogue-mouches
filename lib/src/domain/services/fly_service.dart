@@ -415,7 +415,7 @@ class FlyService {
                   "Fixer les plumes vers l'arrière pour commencer, et les redresser avec le fil de montage en passant à l'arrière de chaque plume"
                 ]),
             new BuildStep(
-                "Prendre des fibres d'une plume de hackle grizzly, et des fibres d'une plume de hackle brun."),
+                "Prendre des fibres d'une plume de hackle grizzly, et des fibres d'une plume de hackle brune."),
             new BuildStep(
                 "Former une queue à l'arrière de l'hameçon avec les fibres",
                 notes: [
