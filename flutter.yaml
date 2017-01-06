@@ -1,16 +1,11 @@
 name: mouches
 uses-material-design: true
 assets:
-  - lib/assets/black_woolly_bugger.jpg
-  - lib/assets/streamer.jpg
-  - lib/assets/caddis.jpg
   - lib/assets/caddis_real.jpg
   - lib/assets/minnows.jpg
   - lib/assets/sangsue_eau.jpg
   - lib/assets/samplehook.jpg
   - lib/assets/green_drake_nymph.jpg
-  - lib/assets/mickey_finn.jpg
-  - lib/assets/copper_john.jpg
   - lib/assets/stonefly_nymph_real.jpg
   - lib/assets/copper_john/chenille.png
   - lib/assets/copper_john/copper_wire.png
@@ -24,3 +19,11 @@ assets:
   - lib/assets/copper_john/parts/tinsel_flash_back.png
   - lib/assets/copper_john/parts/nymph_hook.png
   - lib/assets/muddler_minnow/end_result.png
+  - lib/assets/elk_hair_caddis/end_result.png
+  - lib/assets/mickey_finn/end_result.png
+  - lib/assets/mickey_bad/end_result.png
+  - lib/assets/adams/end_result.png
+  - lib/assets/mudlapin/end_result.png
+  - lib/assets/woolly_bugger/end_result.png
+
+

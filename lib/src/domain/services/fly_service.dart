@@ -6,7 +6,8 @@ class FlyService {
     return [
       new Fly(
           'Woolly Bugger',
-          new Photo('lib/assets/black_woolly_bugger.jpg', 'Woolly bugger noir'),
+          new Photo(
+              'lib/assets/woolly_bugger/end_result.png', 'Woolly bugger noir'),
           <BuildStep>[
             new BuildStep(
                 "Installer fil de montage et revenir jusqu'à l'oeillet"),
@@ -48,7 +49,8 @@ class FlyService {
               new Photo('lib/assets/sangsue_eau.jpg', "Sangsue dans l'eau"))),
       new Fly(
           'Mickey Finn',
-          new Photo('lib/assets/mickey_finn.jpg', 'Streamer noir et jaune'),
+          new Photo('lib/assets/mickey_finn/end_result.png',
+              'Streamer noir et jaune'),
           <BuildStep>[
             new BuildStep(
                 "Installer fil de montage et revenir jusqu'à l'oeillet"),
@@ -97,7 +99,7 @@ class FlyService {
             new BuildStep(
                 "Installer fil de montage et revenir jusqu'au 1/3 de la hampe."),
             new BuildStep(
-                "Istaller plumes de mallard à partir du 1/3 de la hampe.",
+                "Installer plumes de mallard à partir du 1/3 de la hampe.",
                 notes: [
                   "La plume doit dépasser d'environ la longueur de l'ouverture de l'hameçon"
                 ]),
@@ -257,7 +259,8 @@ class FlyService {
                   'lib/assets/stonefly_nymph_real.jpg', 'Stonefly nymph'))),
       new Fly(
           "Elk Hair Caddis",
-          new Photo('lib/assets/caddis.jpg', 'Elk Hair Caddis Fly'),
+          new Photo('lib/assets/elk_hair_caddis/end_result.png',
+              'Elk Hair Caddis Fly'),
           <BuildStep>[
             new BuildStep("Mettre fil de montage"),
             new BuildStep(
@@ -353,7 +356,7 @@ class FlyService {
           FlyDifficulty.hard),
       new Fly(
           'Mickey bad',
-          new Photo('lib/assets/muddler_minnow/end_result.png', 'Mickey bad'),
+          new Photo('lib/assets/mickey_bad/end_result.png', 'Mickey bad'),
           [
             new BuildStep("Installer fil de montage",
                 notes: ["Laisser 2 longueurs d'oeillet à l'avant"]),
@@ -402,7 +405,7 @@ class FlyService {
           FlyDifficulty.easy),
       new Fly(
           'Adams',
-          new Photo('lib/assets/muddler_minnow/end_result.png', 'Mickey bad'),
+          new Photo('lib/assets/adams/end_result.png', 'Adams'),
           <BuildStep>[
             new BuildStep("Installer fil de montage",
                 notes: ["En mettre partout et revenir que 1/3 de la hampe."]),
