@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:mouches/src/domain/models/fly.dart';
+import 'package:catalogue_mouches/src/domain/models/fly.dart';
 import 'package:slugify/slugify.dart';
 import 'dart:async';
 
 class FlySelectorItem extends StatelessWidget {
   final Fly fly;
-  final Slugify _slugifier = new Slugify(); // TODO: Replace with DI
+  final Slugify _slugifier = Slugify(); // TODO: Replace with DI
 
   FlySelectorItem(this.fly);
 
@@ -18,22 +18,22 @@ class FlySelectorItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Widget image = new GestureDetector(
+    final Widget image = GestureDetector(
       onTap: () => _onTap(context),
-      child: new SizedBox.expand(
-        child: new Hero(
-            key: new Key(photoUri),
+      child: SizedBox.expand(
+        child: Hero(
+            key: Key(photoUri),
             tag: photoUri,
-            child: new Image.asset(photoUri, fit: ImageFit.cover)),
+            child: Image.asset(photoUri, fit: BoxFit.cover)),
       ),
     );
 
-    return new GridTile(
-        footer: new GestureDetector(
+    return GridTile(
+        footer: GestureDetector(
             onTap: () => _onTap(context),
-            child: new GridTileBar(
+            child: GridTileBar(
               backgroundColor: Colors.black45,
-              title: new _GridTitleText(fly.name),
+              title: _GridTitleText(fly.name),
             )),
         child: image);
   }
@@ -45,11 +45,9 @@ class _GridTitleText extends StatelessWidget {
   final String text;
 
   @override
-  Widget build(BuildContext context) {
-    return new FittedBox(
-      fit: ImageFit.scaleDown,
+  Widget build(BuildContext context) => FittedBox(
+      fit: BoxFit.scaleDown,
       alignment: FractionalOffset.centerLeft,
-      child: new Text(text),
+      child: Text(text),
     );
-  }
 }

@@ -14,6 +14,13 @@ class Fly {
   final List<BuildStep> steps;
   final List<Part> parts;
 
-  Fly(this.name, this.photo, this.steps, this.parts, this.type, this.difficulty,
-      {this.simulates: null});
+  Fly(
+    this.name,
+    this.photo,
+    this.steps,
+    this.parts,
+    this.type,
+    this.difficulty, {
+    this.simulates,
+  });
 }

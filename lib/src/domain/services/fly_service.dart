@@ -1,23 +1,22 @@
-import 'package:mouches/domain.dart';
+import 'package:catalogue_mouches/domain.dart';
 
 class FlyService {
   // TODO: Remove static with DI
   List<Fly> getFlies() {
     return [
-      new Fly(
+      Fly(
           'Woolly Bugger',
-          new Photo(
+          Photo(
               'lib/assets/woolly_bugger/end_result.png', 'Woolly bugger noir'),
-          <BuildStep>[
-            new BuildStep(
-                "Installer fil de montage et revenir jusqu'à l'oeillet"),
-            new BuildStep("Attacher le marabou", notes: [
+          [
+            BuildStep("Installer fil de montage et revenir jusqu'à l'oeillet"),
+            BuildStep("Attacher le marabou", notes: [
               "De l'oeillet vers l'ardillon",
               'La longueur de la queue doit être environ de la longueur de la hampe'
             ]),
-            new BuildStep(
+            BuildStep(
                 "Attacher les fils de krinkle flash à la hauteur de l'ardillon, laisser pendre à l'arrière."),
-            new BuildStep(
+            BuildStep(
                 "Attacher le hackle à la hauteur de l'ardillon, laisser pendre à l'arrière",
                 notes: [
                   "Les fibres les plus longues du Hackle doivents aller à l'avant",
@@ -25,147 +24,141 @@ class FlyService {
                   "Enlever les fibres webbées",
                   "Tirer les fibres de la tête de la plumes pour permettre de l'attacher plus facilement."
                 ]),
-            new BuildStep(
+            BuildStep(
                 "Attacher la chenille à partir de l'ardillon vers l'oeillet."),
-            new BuildStep(
+            BuildStep(
                 "Enrouler le hackle autour de la chenille, jusqu'à l'oeillet."),
-            new BuildStep(
+            BuildStep(
                 "(Optionnel) Prendre un brin de tinsel pour renforcer le hackle, en l'enroulant autour de celui ci, de l'ardillon vers l'oeillet."),
-            new BuildStep("Faire la fête de la mouche"),
-            new BuildStep("Faire le noeud final"),
-            new BuildStep("Appliquer de la colle"),
+            BuildStep("Faire la fête de la mouche"),
+            BuildStep("Faire le noeud final"),
+            BuildStep("Appliquer de la colle"),
           ],
-          <Part>[
-            new Part('Fil de montage'),
-            new Part('Tinsel',
-                options: ['Plat', 'Multicolore', 'Réfléchissant']),
-            new Part('Chenille', options: ['Medium', 'Noire']),
-            new Part('Hameçon Streamer',
+          [
+            Part('Fil de montage'),
+            Part('Tinsel', options: ['Plat', 'Multicolore', 'Réfléchissant']),
+            Part('Chenille', options: ['Medium', 'Noire']),
+            Part('Hameçon Streamer',
                 options: ['R73-9671', '2XH-3XL', 'Size 4']),
           ],
           FlyType.streamer,
           FlyDifficulty.easy,
-          simulates: new FlySimulation('Sangsue',
-              new Photo('lib/assets/sangsue_eau.jpg', "Sangsue dans l'eau"))),
-      new Fly(
+          simulates: FlySimulation('Sangsue',
+              Photo('lib/assets/sangsue_eau.jpg', "Sangsue dans l'eau"))),
+      Fly(
           'Mickey Finn',
-          new Photo('lib/assets/mickey_finn/end_result.png',
+          Photo('lib/assets/mickey_finn/end_result.png',
               'Streamer noir et jaune'),
-          <BuildStep>[
-            new BuildStep(
-                "Installer fil de montage et revenir jusqu'à l'oeillet"),
-            new BuildStep(
+          [
+            BuildStep("Installer fil de montage et revenir jusqu'à l'oeillet"),
+            BuildStep(
                 "Attacher fil métallique à partir de l'oeillet, jusqu'à l'ardillon.",
                 notes: ["Attacher le fil sur le côté opposé de l'hameçon"]),
-            new BuildStep(
+            BuildStep(
                 "Prendre Tinsel plat/large, couper un bout à 45° et l'attacher à partir de l'ardillon."),
-            new BuildStep("Enrouler le Tinsel plat jusqu'à l'oeillet."),
-            new BuildStep("Enrouler le fil métallique jusqu'à l'oeillet.",
+            BuildStep("Enrouler le Tinsel plat jusqu'à l'oeillet."),
+            BuildStep("Enrouler le fil métallique jusqu'à l'oeillet.",
                 notes: ["Environ 5 tours"]),
-            new BuildStep("Prendre quelques brins de poil (jaune)", notes: [
+            BuildStep("Prendre quelques brins de poil (jaune)", notes: [
               "La longueur doit être d'environ la même que celle de la hampe."
             ]),
-            new BuildStep(
+            BuildStep(
                 "Aligner les poils ensemble et les fixer au niveau de l'oeillet.",
                 notes: ["Le côté des poils alignés doit être à l'arrière"]),
-            new BuildStep("Refaire les étapes #6 et #7 avec des poils rouges",
+            BuildStep("Refaire les étapes #6 et #7 avec des poils rouges",
                 notes: ["En prendre un peu moins"]),
-            new BuildStep("Refaire les étapes #6 et #7 avec des poils jaunes",
+            BuildStep("Refaire les étapes #6 et #7 avec des poils jaunes",
                 notes: ["En prendre encore moins"]),
-            new BuildStep(
+            BuildStep(
                 "Prendre un ou plusieurs brins de krinkle flash, les doubler jusqu'au bout de la queue."),
-            new BuildStep("Faire le noeud final"),
-            new BuildStep(
+            BuildStep("Faire le noeud final"),
+            BuildStep(
                 "(Optionnel) Faire des yeux avec de la lacque 2 couleurs (noir/blanc)"),
-            new BuildStep("Appliquer la colle"),
+            BuildStep("Appliquer la colle"),
           ],
-          <Part>[
-            new Part('Fil de montage'),
-            new Part('Tinsel',
+          [
+            Part('Fil de montage'),
+            Part('Tinsel',
                 options: ['Plat', 'Large', 'Multicolore', 'Réfléchissant']),
-            new Part('Temple Dog Orkla 2 couleurs', options: ['Rouge', 'Noir']),
-            new Part('Hameçon Streamer',
+            Part('Temple Dog Orkla 2 couleurs', options: ['Rouge', 'Noir']),
+            Part('Hameçon Streamer',
                 options: ['R75-79580', '2XH-5XL', 'Size 4']),
-            new Part('Krinkle flash mirror', options: ['Bleu']),
+            Part('Krinkle flash mirror', options: ['Bleu']),
           ],
           FlyType.streamer,
           FlyDifficulty.easy,
-          simulates: new FlySimulation('Menés',
-              new Photo('lib/assets/minnows.jpg', "Menés dans l'eau"))),
-      new Fly(
+          simulates: FlySimulation(
+              'Menés', Photo('lib/assets/minnows.jpg', "Menés dans l'eau"))),
+      Fly(
           'Nympholas verte',
-          new Photo('lib/assets/green_drake_nymph.jpg', 'Green drake nymph'),
-          <BuildStep>[
-            new BuildStep(
+          Photo('lib/assets/green_drake_nymph.jpg', 'Green drake nymph'),
+          [
+            BuildStep(
                 "Installer fil de montage et revenir jusqu'au 1/3 de la hampe."),
-            new BuildStep(
+            BuildStep(
                 "Installer plumes de mallard à partir du 1/3 de la hampe.",
                 notes: [
                   "La plume doit dépasser d'environ la longueur de l'ouverture de l'hameçon"
                 ]),
-            new BuildStep(
+            BuildStep(
                 "Fixer fil de laiton au niveau de l'ardillon, laisser pendre à l'arrière temporairement."),
-            new BuildStep("Amener le fil de montage à l'ardillon"),
-            new BuildStep("Enrouler dubbing sur le fil de montage"),
-            new BuildStep(
+            BuildStep("Amener le fil de montage à l'ardillon"),
+            BuildStep("Enrouler dubbing sur le fil de montage"),
+            BuildStep(
                 "Amener dubbing jusqu'au 1/3, pour faire une forme de corps de nymphe."),
-            new BuildStep(
+            BuildStep(
                 "Enrouler le fil de laiton jusqu'au 1/3 pour former les segments d'abdomen/queue"),
-            new BuildStep("Fixer tinsel plat, laisse pendre vers l'arrière"),
-            new BuildStep(
+            BuildStep("Fixer tinsel plat, laisse pendre vers l'arrière"),
+            BuildStep(
                 "Prendre petit bout de plume de canard, le fixer vers l'arrière",
                 notes: [
                   "Replier quelques fibres du haut de la plume, pour faciliter la fixation.",
                   "Les fibres de la plume doivent être vers le haut, pour que lorsque la plume sera retournée, les fibres ressembleront à des pattes"
                 ]),
-            new BuildStep("Couper l'excédant de la plume "),
-            new BuildStep("Enrouler fibres de paon pour former thorax",
+            BuildStep("Couper l'excédant de la plume "),
+            BuildStep("Enrouler fibres de paon pour former thorax",
                 notes: ["À partir du 1/3 jusqu'à l'oeillet"]),
-            new BuildStep("Fixer et couper l'excédant"),
-            new BuildStep(
+            BuildStep("Fixer et couper l'excédant"),
+            BuildStep(
                 "Replier la plume pour former les pattes avant et la fixer."),
-            new BuildStep(
+            BuildStep(
                 "Replier le tinsel par dessus le thorax (pour faire la carapace) et le fixer"),
-            new BuildStep("Faire la tête avec le fil de montage"),
-            new BuildStep("Faire noeud final"),
-            new BuildStep("Appliquer la colle"),
+            BuildStep("Faire la tête avec le fil de montage"),
+            BuildStep("Faire noeud final"),
+            BuildStep("Appliquer la colle"),
           ],
-          <Part>[
-            new Part('Fil de montage'),
-            new Part('Plumes de mallard', options: ['Beige']),
-            new Part('1 Plume de canard/poule', options: ['Peut être courte']),
-            new Part('Dubbing synthétique', options: ['Vert']),
-            new Part('Fibres de paon', options: ['4 ou 5']),
-            new Part('Tinsel', options: ['Plat']),
-            new Part('Hameçon Streamer',
+          [
+            Part('Fil de montage'),
+            Part('Plumes de mallard', options: ['Beige']),
+            Part('1 Plume de canard/poule', options: ['Peut être courte']),
+            Part('Dubbing synthétique', options: ['Vert']),
+            Part('Fibres de paon', options: ['4 ou 5']),
+            Part('Tinsel', options: ['Plat']),
+            Part('Hameçon Streamer',
                 options: ['R74-9472', '2XH/4XL', 'Size 8']),
           ],
           FlyType.nymph,
           FlyDifficulty.normal,
-          simulates: new FlySimulation(
-              'Nymphe de plécoptère',
-              new Photo(
-                  'lib/assets/stonefly_nymph_real.jpg', 'Stonefly nymph'))),
-      new Fly(
+          simulates: FlySimulation('Nymphe de plécoptère',
+              Photo('lib/assets/stonefly_nymph_real.jpg', 'Stonefly nymph'))),
+      Fly(
           'Nymphe Copper John',
-          new Photo(
-              'lib/assets/copper_john/end_result.png', 'Copper John Nymph'),
-          <BuildStep>[
-            new BuildStep("Installer bille",
+          Photo('lib/assets/copper_john/end_result.png', 'Copper John Nymph'),
+          [
+            BuildStep("Installer bille",
                 notes: ["Par petit trou.", "Par le crochet"],
-                photo: new Photo(
-                    'lib/assets/copper_john/parts/bead_gold_1_8.png',
+                photo: Photo('lib/assets/copper_john/parts/bead_gold_1_8.png',
                     "Bead gold")),
-            new BuildStep(
+            BuildStep(
               "Enrouler du fil de montage pour bloquer la bille",
             ),
-            new BuildStep(
+            BuildStep(
                 "Prendre 2 pattes de caoutchouc, les attacher au niveau de la bille et les amener jusqu'à l'ardillon, en les enroulant de fil à montage.",
                 notes: ["Terminer sur le dessus de l'hameçon."]),
-            new BuildStep("Ramener fil de montage au 1/3 de l'hameçon"),
-            new BuildStep(
+            BuildStep("Ramener fil de montage au 1/3 de l'hameçon"),
+            BuildStep(
                 "Couper les pattes pour qu'elles soient de la longueur de l'ouverture de l'hameçon."),
-            new BuildStep(
+            BuildStep(
               "Enrouler fil de cuivre.",
               notes: [
                 "Prendre 4-5 pouces de fil.",
@@ -173,277 +166,266 @@ class FlyService {
                 "Enrouler de façon compacte, sans laisser de vide entre chaque tour de fil."
               ],
             ),
-            new BuildStep(
+            BuildStep(
               "Revenir avec le fil de cuivre en faisant de plus grands sillons.",
               notes: ["Revenir jusqu'au 1/3 de l'hameçon."],
             ),
-            new BuildStep(
+            BuildStep(
               "Sécuriser le fil de cuivre et couper l'excédant.",
-              photo: new Photo('lib/assets/copper_john/copper_wire.png'),
+              photo: Photo('lib/assets/copper_john/copper_wire.png'),
             ),
-            new BuildStep("Attacher chenille au 1/3 de l'hameçon.",
+            BuildStep("Attacher chenille au 1/3 de l'hameçon.",
                 notes: ["La laisser pendre."],
-                photo: new Photo('lib/assets/copper_john/chenille.png')),
-            new BuildStep("Attacher le tinsel flash back au 1/3 de l'hameçon",
+                photo: Photo('lib/assets/copper_john/chenille.png')),
+            BuildStep("Attacher le tinsel flash back au 1/3 de l'hameçon",
                 notes: ["2 à 3 cm.", "Le laisser pendre à l'arrière."]),
-            new BuildStep("Attacher hackle au niveau de la bille.",
+            BuildStep("Attacher hackle au niveau de la bille.",
                 notes: ["Le laisser pendre."],
-                photo: new Photo('lib/assets/copper_john/hackle.png')),
-            new BuildStep(
-                "Ramener fil de montage jusqu'à la moitié du thorax."),
-            new BuildStep(
-                "Doubler une patte de caoutchouc pour former 2 pattes.",
+                photo: Photo('lib/assets/copper_john/hackle.png')),
+            BuildStep("Ramener fil de montage jusqu'à la moitié du thorax."),
+            BuildStep("Doubler une patte de caoutchouc pour former 2 pattes.",
                 notes: [
                   "Au milieu du thorax.",
                   "2 fois, pour faire 4 pattes.",
                 ],
-                photo: new Photo('lib/assets/copper_john/rubber_legs.png')),
-            new BuildStep("Ramener le fil de montage jusqu'à la bille."),
-            new BuildStep("Enrouler la chenille jusqu'à la bille.",
+                photo: Photo('lib/assets/copper_john/rubber_legs.png')),
+            BuildStep("Ramener le fil de montage jusqu'à la bille."),
+            BuildStep("Enrouler la chenille jusqu'à la bille.",
                 notes: ["En passant entre les pattes."]),
-            new BuildStep("Attacher le tinsel au niveau de la bille",
+            BuildStep("Attacher le tinsel au niveau de la bille",
                 notes: ["Pour former la carapace de la larve."]),
-            new BuildStep("Enrouler le hackle autour de la billes",
+            BuildStep("Enrouler le hackle autour de la billes",
                 notes: ["1 ou 2 tours"]),
-            new BuildStep("Sécuriser le hackle et couper l'excédant."),
-            new BuildStep("Faire le noeud final."),
-            new BuildStep("Appliquer de la colle derrière la bille."),
-            new BuildStep(
+            BuildStep("Sécuriser le hackle et couper l'excédant."),
+            BuildStep("Faire le noeud final."),
+            BuildStep("Appliquer de la colle derrière la bille."),
+            BuildStep(
               "Couper les pattes à la longueur désirée.",
-              photo: new Photo('lib/assets/copper_john/end_result.png'),
+              photo: Photo('lib/assets/copper_john/end_result.png'),
             )
           ],
-          <Part>[
-            new Part(
+          [
+            Part(
               'Hameçon de nymphe',
               options: ['Tiemco 200R', 'Straight eye', '3X Long', 'Size 10'],
-              photo: new Photo('lib/assets/copper_john/parts/nymph_hook.png'),
+              photo: Photo('lib/assets/copper_john/parts/nymph_hook.png'),
             ),
-            new Part(
+            Part(
               'Bead gold',
               options: ['1/8', 'Medium'],
-              photo:
-                  new Photo('lib/assets/copper_john/parts/bead_gold_1_8.png'),
+              photo: Photo('lib/assets/copper_john/parts/bead_gold_1_8.png'),
             ),
-            new Part(
+            Part(
               'Pattes de caoutchouc',
-              photo: new Photo(
-                  'lib/assets/copper_john/parts/rubber_legs_olive.png'),
+              photo:
+                  Photo('lib/assets/copper_john/parts/rubber_legs_olive.png'),
             ),
-            new Part(
+            Part(
               'Fil de cuivre',
               options: ['Medium'],
-              photo: new Photo(
-                  'lib/assets/copper_john/parts/copper_wire_medium.png'),
+              photo:
+                  Photo('lib/assets/copper_john/parts/copper_wire_medium.png'),
             ),
-            new Part(
+            Part(
               'Tinsel flash back',
               options: ['Mirage', 'Large'],
-              photo: new Photo(
-                  'lib/assets/copper_john/parts/tinsel_flash_back.png'),
+              photo:
+                  Photo('lib/assets/copper_john/parts/tinsel_flash_back.png'),
             ),
-            new Part(
+            Part(
               'Crystal chenille',
               options: ['Medium', 'Black'],
-              photo: new Photo(
-                  'lib/assets/copper_john/parts/crystal_chenille.png'),
+              photo: Photo('lib/assets/copper_john/parts/crystal_chenille.png'),
             ),
-            new Part("Hackle de woolly bugger", options: ['Noir ou brun']),
-            new Part("Dubbing synthétique", options: ["Couleur terre/olive"]),
+            Part("Hackle de woolly bugger", options: ['Noir ou brun']),
+            Part("Dubbing synthétique", options: ["Couleur terre/olive"]),
           ],
           FlyType.nymph,
           FlyDifficulty.hard,
-          simulates: new FlySimulation(
-              'Nymphe de plécoptère',
-              new Photo(
-                  'lib/assets/stonefly_nymph_real.jpg', 'Stonefly nymph'))),
-      new Fly(
+          simulates: FlySimulation('Nymphe de plécoptère',
+              Photo('lib/assets/stonefly_nymph_real.jpg', 'Stonefly nymph'))),
+      Fly(
           "Elk Hair Caddis",
-          new Photo('lib/assets/elk_hair_caddis/end_result.png',
+          Photo('lib/assets/elk_hair_caddis/end_result.png',
               'Elk Hair Caddis Fly'),
-          <BuildStep>[
-            new BuildStep("Mettre fil de montage"),
-            new BuildStep(
+          [
+            BuildStep("Mettre fil de montage"),
+            BuildStep(
                 "Attacher le fil de cuivre près de l'oeillet et l'amener vers l'arrière",
                 notes: ["Attacher le fil sur le côté de l'hameçon"]),
-            new BuildStep(
+            BuildStep(
                 "Enrouler fil de montage avec dubbing à partir de l'ardillon, jusqu'à l'oeillet",
                 notes: [
                   "Pour former le corps de la mouche",
                   "Mettre vraiment peu de dubbing pour faciliter l'installation"
                 ]),
-            new BuildStep("Laisser le fil de montage au niveau de l'oeillet"),
-            new BuildStep(
+            BuildStep("Laisser le fil de montage au niveau de l'oeillet"),
+            BuildStep(
                 "Prendre une petite plume, la fixer au niveau de l'oeillet et l'enrouler jusqu'à l'ardillon",
                 notes: [
                   "Les fibres doivent mesurer environ 1.5 fois la longueur de l'ouverture",
                   "Une fois enroulée jusqu'à l'ardillon, la plume sera sécurisée par la fil de cuivre"
                 ]),
-            new BuildStep(
+            BuildStep(
                 "Enrouler le fil de cuivre autour du hackle, jusqu'à l'oeillet."),
-            new BuildStep("Couper l'excédant de plume à l'arrière"),
-            new BuildStep("Prendre une touffe de poil de wapiti",
+            BuildStep("Couper l'excédant de plume à l'arrière"),
+            BuildStep("Prendre une touffe de poil de wapiti",
                 notes: ["Un peu plus longue que l'hameçon"]),
-            new BuildStep("Égaliser le poil dans un égalisateur", notes: [
+            BuildStep("Égaliser le poil dans un égalisateur", notes: [
               "Les fibres inégales vont vers le bas, dans l'égalisateur"
             ]),
-            new BuildStep("Attacher le poil de wapiti au niveau de l'oeillet",
+            BuildStep("Attacher le poil de wapiti au niveau de l'oeillet",
                 notes: [
                   "Les poils ne doivent pas dépasser derrière l'hameçon",
                   "Le poil de wapiti ne doit pas être serré trop fort, on doit plutôt l'attacher solidement avec plusieurs tours de fil"
                 ]),
-            new BuildStep("Faire le noeud final", notes: [
+            BuildStep("Faire le noeud final", notes: [
               "Faire un noeud à la main (ou avec outil) par dessus les poils relevés au niveau de l'oeillet"
             ]),
-            new BuildStep(
+            BuildStep(
                 "Couper les poils au niveau de l'oeil, de façon à former une tête triangulaire inverse"),
-            new BuildStep("Appliquer de la colle"),
+            BuildStep("Appliquer de la colle"),
           ],
-          <Part>[
-            new Part("Hameçon Dry",
+          [
+            Part("Hameçon Dry",
                 options: ["R50-94840", "STD/STD", "Size 6 à 18"]),
-            new Part("Fil montage",
-                options: ["Même couleur que le poil utilisé"]),
-            new Part("Fil de cuivre", options: ["Small"]),
-            new Part("Plumes de hackle pour mouche sèche (ou a bugger)"),
-            new Part("Poil de wapiti"),
+            Part("Fil montage", options: ["Même couleur que le poil utilisé"]),
+            Part("Fil de cuivre", options: ["Small"]),
+            Part("Plumes de hackle pour mouche sèche (ou a bugger)"),
+            Part("Poil de wapiti"),
           ],
           FlyType.dry,
           FlyDifficulty.normal,
-          simulates: new FlySimulation("Tricoptère",
-              new Photo('lib/assets/caddis_real.jpg', 'Plécoptère'))),
-      new Fly(
+          simulates: FlySimulation(
+              "Tricoptère", Photo('lib/assets/caddis_real.jpg', 'Plécoptère'))),
+      Fly(
           'Muddler Minnow',
-          new Photo(
-              'lib/assets/muddler_minnow/end_result.png', 'Muddle Minnow'),
+          Photo('lib/assets/muddler_minnow/end_result.png', 'Muddle Minnow'),
           [
-            new BuildStep("Installer fil de montage",
+            BuildStep("Installer fil de montage",
                 notes: ["Laisser 2 longueurs d'oeillet à l'avant"]),
-            new BuildStep("Amener fil de montage jusqu'à l'ardillon"),
-            new BuildStep(
-                "Attacher fibres d'ailes de dindon pour former queue"),
-            new BuildStep("Ramener fil de montage à l'avant"),
-            new BuildStep("Installer le tinsel plat",
+            BuildStep("Amener fil de montage jusqu'à l'ardillon"),
+            BuildStep("Attacher fibres d'ailes de dindon pour former queue"),
+            BuildStep("Ramener fil de montage à l'avant"),
+            BuildStep("Installer le tinsel plat",
                 notes: ["Faire l'aller-retour de la hampe"]),
-            new BuildStep("Attacher touffe de poils de chevreuil",
+            BuildStep("Attacher touffe de poils de chevreuil",
                 notes: ["À 2 longueurs d'oeillet"]),
-            new BuildStep("Attacher fibres de plumes de dindon", notes: [
+            BuildStep("Attacher fibres de plumes de dindon", notes: [
               "À 1 longueurs d'oeillet",
               "Prendre les fibres intérieures des plumes gauche et droite",
               "Par dessus le poil d'écureuil"
             ]),
-            new BuildStep("Attacher poils de chevreuil", notes: [
+            BuildStep("Attacher poils de chevreuil", notes: [
               "Les poiles doivent arriver environ au 3/4 des plumes de dindon"
             ]),
-            new BuildStep("Faire noeud final",
+            BuildStep("Faire noeud final",
                 notes: ["Replier les poils de chevreuil vers l'arrière"]),
-            new BuildStep(
+            BuildStep(
                 "Couper les poils de chevreuil pour former la tête de la mouche",
                 notes: [
                   "Prendre la mouche dans ses mains pour faciliter la tâche"
                 ]),
           ],
           [
-            new Part("Hameçon Streamer", options: ["Size 6"]),
-            new Part("Fil de montage",
+            Part("Hameçon Streamer", options: ["Size 6"]),
+            Part("Fil de montage",
                 options: ["Blanc", "Plat", "Danville's 210 flat waxed"]),
-            new Part("Poils de chevreuil"),
-            new Part("2 ailes de dindon"),
-            new Part("Poil de queue d'écureil"),
-            new Part("Tinsel", options: ["Large", "Or"])
+            Part("Poils de chevreuil"),
+            Part("2 ailes de dindon"),
+            Part("Poil de queue d'écureil"),
+            Part("Tinsel", options: ["Large", "Or"])
           ],
           FlyType.dry,
           FlyDifficulty.hard),
-      new Fly(
+      Fly(
           'Mickey bad',
-          new Photo('lib/assets/mickey_bad/end_result.png', 'Mickey bad'),
+          Photo('lib/assets/mickey_bad/end_result.png', 'Mickey bad'),
           [
-            new BuildStep("Installer fil de montage",
+            BuildStep("Installer fil de montage",
                 notes: ["Laisser 2 longueurs d'oeillet à l'avant"]),
-            new BuildStep("Installer la pair de yeux.", notes: [
+            BuildStep("Installer la pair de yeux.", notes: [
               "Laisser 1 longueur d'oeillet devant les yeux",
               "Pour sécuriser les yeux, enrouler le fil de montage en formant des huits autour de la pièce"
             ]),
-            new BuildStep(
+            BuildStep(
                 "Doubler fil Trilene et l'attacher à l'arrière des yeux, jusqu'à l'ardillon.",
                 notes: [
                   "Une boucle de Trilene d'environ la même longueur que la hampe doit pendre à l'arrière de l'hameçon"
                 ]),
-            new BuildStep(
+            BuildStep(
                 "Enrouler beaucoup de fil de montage autour de la hampe, pour sécuriser la boucle de Trilene"),
-            new BuildStep("Appliquer beaucoup de colle sur le Trilene"),
-            new BuildStep(
+            BuildStep("Appliquer beaucoup de colle sur le Trilene"),
+            BuildStep(
                 "Prendre bout de lapin et l'attacher au niveau de l'ardillon.",
                 notes: [
                   "Laisser le lapin dépasser derrière, de la longueur de l'hameçon qui ira sur la boucle de Trilene.",
                   "Laisser le lapin dépasser à l'avant, de la longueur de la hampe"
                 ]),
-            new BuildStep("Installer krinkle flash devant la queue de lapin"),
-            new BuildStep("Attacher chenille à l'arrière, laisser pendre"),
-            new BuildStep(
+            BuildStep("Installer krinkle flash devant la queue de lapin"),
+            BuildStep("Attacher chenille à l'arrière, laisser pendre"),
+            BuildStep(
                 "Amener fil de montage à l'avant, attacher hackle derrière les yeux et le laisser pendre vers l'avant"),
-            new BuildStep("Enrouler chenille vers l'avant"),
-            new BuildStep("Enrouler le hackle", notes: [
+            BuildStep("Enrouler chenille vers l'avant"),
+            BuildStep("Enrouler le hackle", notes: [
               "Envoyer les fibres du hackle vers l'arrière en enroulant"
             ]),
           ],
           [
-            new Part("Hameçon Streamer", options: ["Size 4"]),
-            new Part("Fil de montage", options: ["Noir"]),
-            new Part("Lapin", options: [
+            Part("Hameçon Streamer", options: ["Size 4"]),
+            Part("Fil de montage", options: ["Noir"]),
+            Part("Lapin", options: [
               "Cette mouche peut se faire dans le rose, mauve, olive, orange, etc."
             ]),
-            new Part("Hackle de bugger",
+            Part("Hackle de bugger",
                 options: ["De couleur similaire au lapin choisi"]),
-            new Part("Chenille", options: [
+            Part("Chenille", options: [
               "Medium/Large",
               "De couleur similaire au lapin choisi"
             ]),
-            new Part("Krinkle flash"),
+            Part("Krinkle flash"),
           ],
           FlyType.streamer,
           FlyDifficulty.easy),
-      new Fly(
+      Fly(
           'Adams',
-          new Photo('lib/assets/adams/end_result.png', 'Adams'),
-          <BuildStep>[
-            new BuildStep("Installer fil de montage",
+          Photo('lib/assets/adams/end_result.png', 'Adams'),
+          [
+            BuildStep("Installer fil de montage",
                 notes: ["En mettre partout et revenir que 1/3 de la hampe."]),
-            new BuildStep(
+            BuildStep(
                 "Prendre 2 pointes de plumes de hackle Grizzly de la même longueur"),
-            new BuildStep(
+            BuildStep(
                 "Installer les pointes de chaque côté de la hampe pour former les ailes de la mouche",
                 notes: [
                   "Installer les plumes au 1/3 de la hampe (au milieu du thorax)",
                   "Fixer les plumes vers l'arrière pour commencer et les redresser avec le fil de montage en passant à l'arrière de chaque plume"
                 ]),
-            new BuildStep(
+            BuildStep(
                 "Prendre des fibres d'une plume de hackle grizzly et des fibres d'une plume de hackle brune."),
-            new BuildStep(
+            BuildStep(
                 "Former une queue à l'arrière de l'hameçon avec les fibres",
                 notes: [
                   "La longueur de la queue doit être d'environ la longueur de l'ouverture"
                 ]),
-            new BuildStep(
+            BuildStep(
                 "Prendre 1 plume de hackle grizzly et 1 plume de hackle brune, les fixer au niveau de l'ardillon.",
                 notes: ["Les laisser pendre à l'arrière"]),
-            new BuildStep(
+            BuildStep(
                 "Prendre du dubbing gris et en enrouler jusqu'à l'arrière des ailes"),
-            new BuildStep("Amener le fil de montage au niveau de l'oeillet."),
-            new BuildStep(
+            BuildStep("Amener le fil de montage au niveau de l'oeillet."),
+            BuildStep(
                 "Enrouler le hackle grizzly jusqu'à l'oeillet et le fixer"),
-            new BuildStep(
-                "Enrouler le hackle brun jusqu'à l'oeillet et le fixer"),
-            new BuildStep("Faire le noeud final"),
-            new BuildStep("Mettre la colle"),
+            BuildStep("Enrouler le hackle brun jusqu'à l'oeillet et le fixer"),
+            BuildStep("Faire le noeud final"),
+            BuildStep("Mettre la colle"),
           ],
-          <Part>[
-            new Part("Plumes de hackle", options: ["Grizzly"]),
-            new Part("Plumes de hackle", options: ["Brune"]),
-            new Part("Fil de montage"),
-            new Part("Dubbing", options: ["Gris"]),
-            new Part("Hameçon Dry",
-                options: ["R50-94840", "STD/STD", "Size 10"]),
+          [
+            Part("Plumes de hackle", options: ["Grizzly"]),
+            Part("Plumes de hackle", options: ["Brune"]),
+            Part("Fil de montage"),
+            Part("Dubbing", options: ["Gris"]),
+            Part("Hameçon Dry", options: ["R50-94840", "STD/STD", "Size 10"]),
           ],
           FlyType.dry,
           FlyDifficulty.normal)

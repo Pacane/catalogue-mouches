@@ -1,49 +1,44 @@
 import 'package:flutter/material.dart';
 import 'package:event_bus/event_bus.dart';
-import 'package:mouches/domain.dart';
-import 'package:mouches/src/components/fly_selector.dart';
-import 'package:mouches/src/domain/models/fly.dart';
-import 'package:mouches/src/components/fly_page.dart';
+import 'package:catalogue_mouches/domain.dart';
+import 'package:catalogue_mouches/src/components/fly_selector.dart';
+import 'package:catalogue_mouches/src/domain/models/fly.dart';
+import 'package:catalogue_mouches/src/components/fly_page.dart';
 import 'package:slugify/slugify.dart';
 
 void main() {
-  runApp(new App());
+  runApp(App());
 }
 
-EventBus eventBus = new EventBus();
+EventBus eventBus = EventBus();
 
 class App extends StatefulWidget {
   App({Key key}) : super(key: key);
 
   @override
-  State createState() {
-    return new AppState();
-  }
+  State createState() => AppState();
 }
 
 class AppState extends State<App> {
   AppState();
 
   @override
-  Widget build(BuildContext context) {
-    return new MaterialApp(
-        title: 'Montage de mouche', routes: _kRoutes());
-  }
+  Widget build(BuildContext context) =>
+      MaterialApp(title: 'Montage de mouche', routes: _kRoutes());
 }
 
 Map<String, WidgetBuilder> _kRoutes() {
-  final flies = new FlyService().getFlies();
+  final flies = FlyService().getFlies();
   // TODO: Use DI
-  final sluggifier = new Slugify();
+  final sluggifier = Slugify();
 
   final routes = <String, WidgetBuilder>{
-    '/': (BuildContext c) => new FlySelector(),
+    '/': (BuildContext c) => FlySelector(),
   };
 
   flies.forEach((Fly f) {
     final flySlug = sluggifier.slugify(f.name);
-    routes.putIfAbsent(
-        '/fly/$flySlug', () => (BuildContext c) => new FlyPage(f));
+    routes.putIfAbsent('/fly/$flySlug', () => (BuildContext c) => FlyPage(f));
   });
 
   return routes;

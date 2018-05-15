@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mouches/domain.dart';
+import 'package:catalogue_mouches/domain.dart';
 import 'step_widget.dart';
 
 class BuildStepsList extends StatelessWidget {
@@ -9,10 +9,9 @@ class BuildStepsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final stepsWidgets =
-        new List.generate(steps.length, (i) => i).map((int index) {
+    final stepsWidgets = List.generate(steps.length, (i) => i).map((int index) {
       final step = steps[index];
-      return new StepWidget(
+      return StepWidget(
         step.text,
         notes: step.notes,
         pictureUri: step.photo?.resourceUri,
@@ -20,6 +19,6 @@ class BuildStepsList extends StatelessWidget {
       );
     });
 
-    return new Block(children: stepsWidgets.toList());
+    return ListView(children: stepsWidgets.toList());
   }
 }

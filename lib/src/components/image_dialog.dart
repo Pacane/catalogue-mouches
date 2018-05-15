@@ -7,27 +7,31 @@ class ImageDialog extends StatelessWidget {
   ImageDialog({
     Key key,
     @required this.resourceUri,
-  })
-      : super(key: key);
+  }) : super(key: key);
 
-  static Future<dynamic> showImageDialog(
-          BuildContext c, String pictureUri) =>
-      showDialog(context: c, child: new ImageDialog(resourceUri: pictureUri));
+  static Future<dynamic> showImageDialog(BuildContext c, String pictureUri) =>
+      showDialog(
+        context: c,
+        builder: (context) => ImageDialog(resourceUri: pictureUri),
+      );
 
   @override
   Widget build(BuildContext context) {
-    final List<Widget> body = <Widget>[];
+    final body = <Widget>[];
 
-    body.add(new Image.asset(resourceUri));
+    body.add(Image.asset(resourceUri));
 
-    return new Dialog(
-        child: new IntrinsicWidth(
-            stepWidth: 56.0,
-            child: new ConstrainedBox(
-                constraints: const BoxConstraints(minWidth: 280.0),
-                child: new Column(
-                    mainAxisSize: MainAxisSize.min,
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: body))));
+    return Dialog(
+      child: IntrinsicWidth(
+        stepWidth: 56.0,
+        child: ConstrainedBox(
+          constraints: BoxConstraints(minWidth: 280.0),
+          child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: body),
+        ),
+      ),
+    );
   }
 }

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:mouches/domain.dart';
+import 'package:catalogue_mouches/domain.dart';
 import 'fly_overview.dart';
 import 'parts_list.dart';
 import 'build_steps_list.dart';
 
-class FlyPage extends StatelessWidget {
+class FlyPage extends StatefulWidget {
   final Fly fly;
 
   FlyPage(this.fly);
@@ -24,31 +24,60 @@ class FlyPage extends StatelessWidget {
   };
 
   @override
+  FlyPageState createState() => new FlyPageState(fly);
+}
+
+class FlyPageState extends State<FlyPage> with TickerProviderStateMixin {
+  final Fly fly;
+
+  TabController tabController;
+
+  @override
+  void initState() {
+    super.initState();
+
+    tabController = new TabController(length: 3, vsync: this);
+  }
+
+  FlyPageState(this.fly);
+
+  @override
   Widget build(BuildContext context) {
-    return new TabBarSelection(
-        values: icons,
-        child: new Scaffold(
-            appBar: new AppBar(
-                title: new Text(fly.name),
-                bottom: new TabBar<IconData>(
-                    isScrollable: true,
-                    labels: new Map.fromIterable(icons,
-                        value: (IconData icon) => new TabLabel(
-                            text: labels[icon].toUpperCase(),
-                            icon: new Icon(icon))))),
-            body: new TabBarView<IconData>(children: <Widget>[
-              new Container(
-                  key: new ObjectKey(Icons.info),
-                  padding: const EdgeInsets.all(12.0),
-                  child: new FlyOverview(fly)),
-              new Container(
-                  key: new ObjectKey(Icons.shopping_cart),
-                  padding: const EdgeInsets.all(12.0),
-                  child: new PartsList(fly.parts)),
-              new Container(
-                  key: new ObjectKey(Icons.build),
-                  padding: const EdgeInsets.all(12.0),
-                  child: new BuildStepsList(fly.steps)),
-            ])));
+    var tabs = <Widget>[
+      Tab(
+        key: ObjectKey(Icons.info),
+        icon: Icon(Icons.info),
+        text: 'INFORMATIONS',
+      ),
+      Tab(
+        key: ObjectKey(Icons.shopping_cart),
+        icon: Icon(Icons.shopping_cart),
+        text: 'MATÉRIEL',
+      ),
+      Tab(
+        key: ObjectKey(Icons.build),
+        icon: Icon(Icons.build),
+        text: 'MONTAGE',
+      ),
+    ];
+    var tabBarView = TabBarView(
+      children: [
+        FlyOverview(fly),
+        PartsList(fly.parts),
+        BuildStepsList(fly.steps),
+      ],
+      controller: tabController,
+    );
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(fly.name),
+        bottom: TabBar(
+          tabs: tabs,
+          controller: tabController,
+        ),
+      ),
+      body: tabBarView,
+    );
   }
 }

@@ -20,44 +20,45 @@ class StepWidget extends StatelessWidget {
     final theme = Theme.of(context);
 
     final notesWidgets = notes.map<Widget>((String note) {
-      return new Padding(
-        padding: const EdgeInsets.symmetric(vertical: 10.0),
-        child: new Text(note, style: theme.textTheme.caption),
+      return Padding(
+        padding: EdgeInsets.symmetric(vertical: 10.0),
+        child: Text(note, style: theme.textTheme.caption),
       );
     });
 
-    final notesWidgetsWithDividers = ListItem
-        .divideItems(context: context, items: notesWidgets.toList())
+    final notesWidgetsWithDividers = ListTile
+        .divideTiles(context: context, tiles: notesWidgets.toList())
         .toList();
 
     return notesWidgetsWithDividers;
   }
 
   @override
-  Widget build(BuildContext context) {
-    final notesWidgets = _buildNotes(context);
-
-    return new Card(
-      child: new Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: new Row(
-          children: [
-            new CircleAvatar(child: new Text(stepNumber.toString())),
-            new Flexible(
-                child: new Block(
-                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                    children: <dynamic>[new Text(mainText), notesWidgets]
-                        .fold(<Widget>[], partiallyFlattenList))),
-            pictureUri == null
-                ? new Container()
-                : new IconButton(
-                    icon: new Icon(Icons.photo),
-                    onPressed: () =>
-                        ImageDialog.showImageDialog(context, pictureUri),
-                  )
-          ],
+  Widget build(BuildContext context) => Card(
+        child: Padding(
+          padding: EdgeInsets.all(16.0),
+          child: Row(
+            children: [
+              CircleAvatar(child: Text(stepNumber.toString())),
+              Flexible(
+                  child: new Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(mainText),
+                      _buildNotes(context),
+                    ].fold([], partiallyFlattenList)),
+              )),
+              pictureUri == null
+                  ? Container()
+                  : IconButton(
+                      icon: Icon(Icons.photo),
+                      onPressed: () =>
+                          ImageDialog.showImageDialog(context, pictureUri),
+                    ),
+            ],
+          ),
         ),
-      ),
-    );
-  }
+      );
 }
