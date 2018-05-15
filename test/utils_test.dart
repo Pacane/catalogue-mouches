@@ -20,7 +20,7 @@ void main() {
         'returns list with element added when element is not iterable and '
         'initial list already contains something', () {
       final elementToAdd = 12;
-      final previous = ['Hello'];
+      final previous = <dynamic>['Hello'];
       final result = partiallyFlattenList(previous, elementToAdd);
 
       expect(result, ['Hello', 12]);
@@ -28,8 +28,8 @@ void main() {
 
     test('returns list with appended items of the new list to the previous one',
         () {
-      final elementToAdd = [12, 13];
-      final previous = ['Hello'];
+      final elementToAdd = <dynamic>[12, 13];
+      final previous = <dynamic>['Hello'];
       final result = partiallyFlattenList(previous, elementToAdd);
 
       expect(result, ['Hello', 12, 13]);
