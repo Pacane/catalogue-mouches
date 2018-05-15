@@ -32,14 +32,14 @@ class FlyPageState extends State<FlyPage> with TickerProviderStateMixin {
 
   TabController tabController;
 
+  FlyPageState(this.fly);
+
   @override
   void initState() {
     super.initState();
 
     tabController = new TabController(length: 3, vsync: this);
   }
-
-  FlyPageState(this.fly);
 
   @override
   Widget build(BuildContext context) {

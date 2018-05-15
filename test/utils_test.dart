@@ -1,5 +1,5 @@
 import 'package:test/test.dart';
-import 'package:mouches/utils.dart';
+import 'package:catalogue_mouches/utils.dart';
 
 void main() {
   group('partially flatten a list', () {
